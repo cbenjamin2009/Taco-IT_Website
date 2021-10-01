@@ -38,7 +38,7 @@
 
 body {
   background-color: #000;
-  background-image: url('./Images/home5.jpg');
+  background-image: url('./Images/home4.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -291,6 +291,59 @@ padding: 2em;
  transform: scale(1.2);
 }
 
+/* Contact Page */
+.contactForm{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20vh;
+  color: var(--clr-white);
+  text-align: center;
+  
+}
+
+.contact-flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  
+}
+
+.contact-flex label {
+  flex-basis: 20%;
+  padding: 10px;
+  margin: 10px;
+  font-size: var(--fs-h3);
+}
+
+.contact-flex input {
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  border-radius: 1em;
+  border: none;
+}
+
+.contact-flex input:focus{
+  border: 1px rgba(63, 63, 245, 0.842);
+}
+
+.contact-flex textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  height: 15vh;
+  border-radius: 1em;
+  border: none;
+  resize: none;
+}
+
+.submitContainer input{
+  background-color:rgba(63, 63, 245, 0.842);
+  font-size: 1.5em;
+}
 
 
 /* Media Small Devices */

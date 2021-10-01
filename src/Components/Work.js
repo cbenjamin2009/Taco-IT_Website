@@ -49,6 +49,18 @@ function Work() {
                         <label className="project-label" htmlFor="project-05">Working Formula Based Calculator</label>
                     </Link>
                 </div>
+                <div className="project-item">
+                    <Link To="/project-06-wildfire-tracker.html" id="project-06" className="portfolio__item">
+                        <img src={Project05Thumb} alt="A wildfire tracker map" className="portfolio__img"/>
+                        <label className="project-label" htmlFor="project-06">Wildfire Tracker</label>
+                    </Link>
+                </div>
+                <div className="project-item">
+                    <Link To="/project-06-mars-weather.html" id="project-07" className="portfolio__item">
+                        <img src={Project05Thumb} alt="A calculator" className="portfolio__img"/>
+                        <label className="project-label" htmlFor="project-07">Wildfire Tracker</label>
+                    </Link>
+                </div>
                 
             </section>
         </div>
