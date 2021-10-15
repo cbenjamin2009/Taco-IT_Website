@@ -15,8 +15,8 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: #CCC;
-  --clr-white: #FFF;
+  --clr-light: #000;
+  --clr-white: #000;
   --clr-dark: rgba(252, 252, 252, 0.2);
   --clr-shadow: rgba(20, 20, 20, .5);
   --clr-accent: #258f2e;
@@ -38,9 +38,9 @@
 
 body {
   background-color: #000;
-  background-image: url('./Images/home4.jpg');
+  background-image: url('./Images/home7.jpg');
   background-position: center;
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
 
   top: 0;
@@ -66,12 +66,17 @@ body {
   list-style-type: none;
   justify-content: space-between;
   flex-direction: row;
-  height: 60px;
+  height: 80px;
   padding: 15px 30px 5px 30px;
 
   font-size: var(--fs-h3);
 }
 
+.navbar__item{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
 
 .navbar a{
@@ -84,6 +89,11 @@ body {
 
 /* Active navbar style */
 .navbar > li .active {
+  color: var(--clr-menu-active);
+ transition: 200ms ease-in;
+}
+
+.navbar__item .active {
   color: var(--clr-menu-active);
  transition: 200ms ease-in;
 }
@@ -112,7 +122,7 @@ body {
   justify-content: space-between;
   width: 40vw;
   
-  margin-top: 75vh;
+  /* margin-top: 75vh; */
   margin-left: auto;
   margin-right: auto;
   color: var(--clr-accent);
@@ -135,24 +145,42 @@ transition: 300ms ease-in-out;
 
 /* Title Values */
 .titleText {
-  color: var(--clr-light);
-  left: 0;
-  /* line-height: 200px; */
-  /* margin-top: -100px; */
-  position: absolute;
+  color: #000;
+  font-size: 3em;
+  width: fit-content;
   text-align: center;
-  top: 50%;
-  width: 100%;
-  font-size: var(--fs-h1)
+  margin-top: 30vh;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  /* margin: 0 auto; Gives that scrolling effect as the typing happens */
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
 
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 55vw }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
 }
 /* Section Styling (Multiple Pages) */
 section {
   min-width: auto;
-  max-width: 1000px;
+  max-width: 100%;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
-padding: 2em;
+  padding: 2em;
   color: var(--clr-light);
   background: var(-clr-section-back);
   font-family: var(--ff-secondary);
@@ -173,8 +201,9 @@ padding: 2em;
 }
 /* Service Start */
 .service {
+  width: 30vw;
   line-height: 2;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .service h2{
@@ -186,7 +215,8 @@ padding: 2em;
   text-align: center;
 }
 .service img {
-  padding-left: 20px;
+  padding-top: 2em;
+  
   max-width: 100%;
   height: 25vh;
   width: 20vw;
@@ -194,17 +224,17 @@ padding: 2em;
 
 .flex-container{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
 }
 
-.text-container {
-  flex-basis: 40%;
-  padding-right: 40px;
-}
+
 
 .services__body {
+  display: flex;
+
   color: var(--clr-white);
   background: rgba(236, 228, 228, 0.12);
   border-radius: 16px;
@@ -213,6 +243,10 @@ padding: 2em;
   -webkit-backdrop-filter: blur(2.3px);
   padding: 20px;
 }
+
+
+
+
 /* About Start */
 .about-me__body {
   line-height: 2;
@@ -352,6 +386,16 @@ padding: 2em;
   .section__title .section__subtitle .section__subtitle--about{
     font-size: 50%;
   }
+
+  .services__body {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+
   
   .titleText {
     font-size: 16px;

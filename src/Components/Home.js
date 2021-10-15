@@ -5,11 +5,9 @@ function Home() {
     
     return (
         <div className="homePage">
-            <h2 className="titleText">Let's Taco Bout Your IT Needs Today!</h2>
+            <h1 className="titleText">Let's Taco Bout Your IT Needs Today!</h1>
             <div className="more-container">
-                <div className="services"><span>Services</span></div>
-                
-                <div className="my-work"><span>My Work</span></div>
+
             </div>
         </div>
     )
