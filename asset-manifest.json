@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Taco-IT_Website/static/css/main.210673dc.chunk.css",
-    "main.js": "/Taco-IT_Website/static/js/main.2bec8397.chunk.js",
-    "main.js.map": "/Taco-IT_Website/static/js/main.2bec8397.chunk.js.map",
+    "main.css": "/Taco-IT_Website/static/css/main.40f982b5.chunk.css",
+    "main.js": "/Taco-IT_Website/static/js/main.d7c785d9.chunk.js",
+    "main.js.map": "/Taco-IT_Website/static/js/main.d7c785d9.chunk.js.map",
     "runtime-main.js": "/Taco-IT_Website/static/js/runtime-main.5b8eadde.js",
     "runtime-main.js.map": "/Taco-IT_Website/static/js/runtime-main.5b8eadde.js.map",
     "static/js/2.5c979191.chunk.js": "/Taco-IT_Website/static/js/2.5c979191.chunk.js",
     "static/js/2.5c979191.chunk.js.map": "/Taco-IT_Website/static/js/2.5c979191.chunk.js.map",
     "index.html": "/Taco-IT_Website/index.html",
-    "static/css/main.210673dc.chunk.css.map": "/Taco-IT_Website/static/css/main.210673dc.chunk.css.map",
+    "static/css/main.40f982b5.chunk.css.map": "/Taco-IT_Website/static/css/main.40f982b5.chunk.css.map",
     "static/js/2.5c979191.chunk.js.LICENSE.txt": "/Taco-IT_Website/static/js/2.5c979191.chunk.js.LICENSE.txt",
     "static/media/Project-01-small.f5c5c50b.png": "/Taco-IT_Website/static/media/Project-01-small.f5c5c50b.png",
     "static/media/Project-02-small.0e099822.png": "/Taco-IT_Website/static/media/Project-02-small.0e099822.png",
@@ -16,16 +16,18 @@
     "static/media/Project-04-small.69b13c4b.png": "/Taco-IT_Website/static/media/Project-04-small.69b13c4b.png",
     "static/media/Project-05-small.eca170e8.png": "/Taco-IT_Website/static/media/Project-05-small.eca170e8.png",
     "static/media/Project-06-small.eaec16a2.png": "/Taco-IT_Website/static/media/Project-06-small.eaec16a2.png",
+    "static/media/Project-07-small.e301fcc3.png": "/Taco-IT_Website/static/media/Project-07-small.e301fcc3.png",
+    "static/media/Project-08-small.34f120e2.png": "/Taco-IT_Website/static/media/Project-08-small.34f120e2.png",
     "static/media/Website_Logo.0e3c532d.png": "/Taco-IT_Website/static/media/Website_Logo.0e3c532d.png",
-    "static/media/consult.8d1b8030.jpg": "/Taco-IT_Website/static/media/consult.8d1b8030.jpg",
-    "static/media/develop.cfa65986.jpg": "/Taco-IT_Website/static/media/develop.cfa65986.jpg",
+    "static/media/consult.779379d3.jpg": "/Taco-IT_Website/static/media/consult.779379d3.jpg",
+    "static/media/develop.efbedbf4.jpg": "/Taco-IT_Website/static/media/develop.efbedbf4.jpg",
     "static/media/App.css": "/Taco-IT_Website/static/media/home7.387e72b8.jpg",
-    "static/media/manage.18adf558.jpg": "/Taco-IT_Website/static/media/manage.18adf558.jpg"
+    "static/media/manage.49a3c4c6.jpg": "/Taco-IT_Website/static/media/manage.49a3c4c6.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.5b8eadde.js",
     "static/js/2.5c979191.chunk.js",
-    "static/css/main.210673dc.chunk.css",
-    "static/js/main.2bec8397.chunk.js"
+    "static/css/main.40f982b5.chunk.css",
+    "static/js/main.d7c785d9.chunk.js"
   ]
 }
