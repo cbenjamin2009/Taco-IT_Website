@@ -4,15 +4,29 @@ function About() {
     return (
         <>
        <section class="about-me" id="about">
-            <h1 class="section__title section__title--about">Who I am</h1>
-            <h2 class="section__subtitle section__subtitle--about">Developer, IT Pro, Taco Connoisseur</h2>
+            <h1 class="section__title section__title--about">About Us</h1>
 
             <div class="about-me__body">
-                <p>I have a Masters Degree in Computer Science from WGU Washington where I studied IT Management. I have a Bachelors Degree in Computer Science from Devry University where I studied website administration and design. </p>
-                <br /><p>Technology has been my passion since I was 8 years old. I have spent over 12 years working with technology professionally. </p>
-                <br /><p>I have discovered that my true passion in life is utilizing technology as a form of process management. Though I work in IT, it's mearly a tool that I utilize to help you and your company achieve it's goals. </p> 
-                <br /><p> Whether those goals include a specific application on your website, providing critical information to potential clients, or serving up a menu for your taco truck customers. </p>
-                <br /><p>Let's schedule a 15 minute phone call or video chat to discuss your project, large or small. Every project is attainable.</p>
+                <h2>Founding:</h2>
+                <p>Taco-IT was founded by Chris Benjamin to provide Technology services to local businesses in the Pacific Northwest. We exist to help give a technological edge to businesses who typically do not have their own 
+                    internal IT department. Chris Benjamin attended Devry University where he earned his Bachelor of Computer Science while studying web application design and administration. He later went on to obtain his Masters in Computer Science focusing on IT Management to attain the skills necessary to drive businesses forward using technology. 
+                    Chris has worked for several local technology companies from a local school district, a pharmacy support company, and as a the IT Manager for a medium size medical practice. 
+                    Technology is his passion and knowing that businesses rely on a strong technology backend to stay successful and competitive in today's market gave him the desire to spread his expertise to other local businsses. 
+                </p>
+
+                <h2>Our Why:</h2>
+                <p>To empower businesses to utilize technology as an asset. Let the power of technology in todays' digital world work for you so you can focus on your own innovations.</p>
+                
+                <h2>Our Mission: </h2>
+                <p>Our mission is to help your company stand out on the internet so that your customers can find you and learn about your business. Let us handle the technical aspects and you handle your passion</p>
+
+                <h2>Our What:</h2>
+
+                <p>Our expertise is technology, your expertise is the foundation of your business. Let's work together to see what aspects of technology can be implemented that will help your business be efficient, accurate, and reliable. Sometime's its creating and managing your website, othertimes it may be implementing a new software solution to help your sales team track leads and drive more sales. Later it may be to setup a phone system so your customers can reach our staff directly. Whatever it is, lets taco bout it!</p>
+                
+                <h2>Our How:</h2>
+                <p>With over 15 years of professional experience in the Pacific Northwest, in multiple industry verticles, we possess strong market knowledge of products and services that can be applied to empower your business. By employing the best minds in the industry whose focus is to help make your business successful we can ensure you get products that fit your business and evolve as you grow. </p>
+
             </div>
 
         </section>

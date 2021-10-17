@@ -1,7 +1,8 @@
 import './App.css';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router } from 'react-router-dom'
 import Nav from './Components/Nav'
 import Logo from './Components/Logo';
+import Home from './Components/Home'
 
 function App() {
   return (
@@ -9,7 +10,6 @@ function App() {
     <div className="App">
       <Logo/>
      <Nav />
-
     </div>
     </Router>
   );

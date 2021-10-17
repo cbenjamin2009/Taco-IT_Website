@@ -8,6 +8,11 @@ function Contact() {
     }
 
     return (
+        <>
+        <div className="contactDesription">
+            <h2 className="section__title section__title--mywork">Contact us today</h2>
+            <h4 className="section__subtitle">Fill out the form below and we will reply within 1 business day, we look forward to meeting you and discussing your business needs</h4>
+        </div>
         <div className="contactFormContainer">
    <form className="contactForm" action="https://api.staticforms.xyz/submit" method="post">
         <input type="hidden" name="accessKey" value="61768859-935c-4f63-92f8-1f254a0346ad"/>
@@ -40,6 +45,7 @@ function Contact() {
         </div>
     </form>
         </div>
+        </>
     )
 }
 

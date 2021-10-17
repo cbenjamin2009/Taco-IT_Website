@@ -2,7 +2,7 @@
   "name": "tacoit",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://cbenjamin2009.github.io/Taco-IT_Website"
+  "homepage": "http://cbenjamin2009.github.io/Taco-IT_Website",
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.4.1",

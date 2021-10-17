@@ -1,3 +1,4 @@
+
 function Service({ServiceTitle, ServiceDescription, ServiceImage}) {
     return (
               <div class="service">
@@ -5,13 +6,16 @@ function Service({ServiceTitle, ServiceDescription, ServiceImage}) {
                     <div className="flex-container">
                         
                         <div className="image-container">
-                            <img className="servicesImage" src={ServiceImage} alt=""/>
+                           <img className="servicesImage" src={ServiceImage} alt=""/>
                         </div>
                         <div className="text-container">
                             <p>{ServiceDescription}</p>
                         </div>
+                        
                     </div>
                 </div> 
+
+
     )
 }
 

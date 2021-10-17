@@ -248,9 +248,6 @@ section {
 
 
 /* About Start */
-.about-me__body {
-  line-height: 2;
-}
 
 .about-me__body{
   color: var(--clr-white);
@@ -260,10 +257,10 @@ section {
   backdrop-filter: blur(2.3px);
   -webkit-backdrop-filter: blur(2.3px);
   padding: 20px;
-}
-
-.section__subtitle--about {
-  margin-bottom: 20px;
+  width: 75vw;
+  line-height: 2;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .error {
