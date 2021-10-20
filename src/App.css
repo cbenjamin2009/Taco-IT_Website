@@ -20,7 +20,7 @@
   --clr-dark: rgba(252, 252, 252, 0.2);
   --clr-shadow: rgba(20, 20, 20, .5);
   --clr-accent: #258f2e;
-  --clr-menu-active: rgba(63, 63, 245, 0.842);
+  --clr-menu-active: rgba(255, 255, 255, 0.842);
   --clr-error: #AA0000;
   --clr-section-back: rgba(20, 20, 20, .5);
   /* https://coolors.co/001011-093a3e-3aafb9-64e9ee-97c8eb */
@@ -35,14 +35,15 @@
 
 }
 
+.area{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+}
+
 
 body {
-  background-color: #000;
-  background-image: url('./Images/home7.jpg');
-  background-position: center;
-  background-size:cover;
-  background-repeat: no-repeat;
-
   top: 0;
   left: 0;
   height: 100vh;
@@ -116,37 +117,33 @@ body {
 
 }
 /* Home Page */
-.more-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 40vw;
-  
-  /* margin-top: 75vh; */
+.calltoaction {
+  margin-top: 5em;
+  text-align: center;
+}
+.calltoaction__link{
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 3em;
+}
+.calltoaction{
+  cursor: pointer;
+  padding: 10px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    border: 1px solid rgba(242, 243, 245, 0.3);
+  width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  color: var(--clr-accent);
-  font-size: var(--fs-h2);
-  font-weight: 700;
-  font-family: var(--ff-secondary);
+  height: fit-content;
 }
-
-.more-container span {
-background-color: rgba(252, 252, 252, 0.2);
-padding: 10px;
-border-radius: 5em;
-}
-
-.more-container span:hover{
-background-color: rgba(252,252,252,0.7);
-transition: 300ms ease-in-out;
-}
-
-
 /* Title Values */
 .titleText {
   color: #000;
-  font-size: 3em;
+  font-size: 4em;
   width: fit-content;
   text-align: center;
   margin-top: 30vh;
@@ -165,7 +162,7 @@ transition: 300ms ease-in-out;
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 55vw }
+  to { width: 75vw }
 }
 
 /* The typewriter cursor effect */
@@ -383,6 +380,7 @@ section {
   .section__title .section__subtitle .section__subtitle--about{
     font-size: 50%;
   }
+  
 
   .services__body {
     display: flex;
@@ -401,6 +399,8 @@ section {
   p {
     font-size: 1em;
   }
+
+
   
   .navbar {
     margin-left: 25%;
@@ -410,10 +410,12 @@ section {
     justify-content: space-evenly;
     flex-direction: row;
     margin-bottom: 25px;
-    height: 75px;
+    height: fit-content;
     background: var(-clr-section-back);
     font-size: 75%;
   }
+
+
   
   .logo img {
     width: 150px;

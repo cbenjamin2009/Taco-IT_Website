@@ -65,23 +65,23 @@ function Nav() {
         <Router>
         <nav>
             <ul className="navbar">
-                <li className="navbar__item"> <HomeIcon id="HomeIcon" className="nav-link active"/>
-                    <Link to={'/'} id="nav-link-home" className="nav-link active" onClick={()=>setActive('Home')} > Home</Link>
+                <li className="navbar__item"> 
+                    <Link to={'/'} id="nav-link-home" className="nav-link active" onClick={()=>setActive('Home')} ><HomeIcon id="HomeIcon" className="nav-link active"/> Home</Link>
                 </li>
-                <li className="navbar__item"> <ContactMailIcon id="ContactIcon" className="nav-link"/>
-                    <Link to={'/contact'} id="nav-link-contact"  className="nav-link" onClick={()=>setActive('Contact')} > Contact</Link>
-                </li>
-                <li className="navbar__item">
-                    <InfoIcon id="AboutIcon" className="nav-link"/>
-                    <Link to={'/about'} id="nav-link-about"  className="nav-link"  onClick={()=>setActive('About')}> About</Link>
+                <li className="navbar__item"> 
+                    <Link to={'/contact'} id="nav-link-contact"  className="nav-link" onClick={()=>setActive('Contact')} ><ContactMailIcon id="ContactIcon" className="nav-link"/> Contact</Link>
                 </li>
                 <li className="navbar__item">
-                    <DesignServicesIcon id="ServicesIcon"  className="nav-link"/>
-                    <Link to={'/services'} id="nav-link-services"  className="nav-link"  onClick={()=>setActive('Services')}> Services</Link>
+              
+                    <Link to={'/about'} id="nav-link-about"  className="nav-link"  onClick={()=>setActive('About')}> <InfoIcon id="AboutIcon" className="nav-link"/> About</Link>
                 </li>
                 <li className="navbar__item">
-                    <BusinessIcon id="WorkIcon" className="nav-link"/>
-                    <Link to={'/work'} id="nav-link-work"  className="nav-link" onClick={()=>setActive('Work')}> My Work </Link>
+                  
+                    <Link to={'/services'} id="nav-link-services"  className="nav-link"  onClick={()=>setActive('Services')}>  <DesignServicesIcon id="ServicesIcon"  className="nav-link"/> Services</Link>
+                </li>
+                <li className="navbar__item">
+                    
+                    <Link to={'/work'} id="nav-link-work"  className="nav-link" onClick={()=>setActive('Work')}><BusinessIcon id="WorkIcon" className="nav-link"/> My Work </Link>
                 </li>
 
             </ul>
