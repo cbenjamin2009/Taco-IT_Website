@@ -380,6 +380,15 @@ section {
   .section__title .section__subtitle .section__subtitle--about{
     font-size: 50%;
   }
+
+  .calltoaction__link{
+    font-size: 50%;
+  }
+
+  .calltoaction__icon{
+    height: 20px;
+    width: 20px;
+  }
   
 
   .services__body {
