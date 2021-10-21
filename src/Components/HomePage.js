@@ -8,7 +8,7 @@ function HomePage() {
         <div className="App">
             <WallPaper />
             <div className="top-nav">
-            <Logo/>
+            <Logo />
             <Nav />
             </div>
          

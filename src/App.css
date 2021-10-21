@@ -35,12 +35,12 @@
 
 }
 
-.area{
+/* .area{
   height: 100vh;
   width: 100vw;
   position: absolute;
   z-index: -1;
-}
+} */
 
 
 body {
@@ -48,6 +48,7 @@ body {
   left: 0;
   height: 100vh;
   width: 100vw;
+  background-color: #6068f5;
 }
 
 
@@ -73,11 +74,7 @@ body {
   font-size: var(--fs-h3);
 }
 
-.navbar__item{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+
 
 
 .navbar a{
@@ -143,20 +140,20 @@ body {
 /* Title Values */
 .titleText {
   color: #000;
-  font-size: 4em;
-  width: fit-content;
+  font-size: 300%;
+  width: 80vw;
   text-align: center;
   margin-top: 30vh;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid black; /* The typwriter cursor */
+  word-wrap: break-word;
+  overflow:hidden;
+  /* overflow: hidden; Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
   /* margin: 0 auto; Gives that scrolling effect as the typing happens */
   margin-left: auto;
   margin-right: auto;
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    typing 3.5s steps(35, end)
 }
 
 /* The typing effect */
@@ -166,10 +163,7 @@ body {
 }
 
 /* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: black; }
-}
+
 /* Section Styling (Multiple Pages) */
 section {
   min-width: auto;
@@ -377,19 +371,13 @@ section {
 /* Media Small Devices */
 
 @media (max-width: 960px) {
-  .section__title .section__subtitle .section__subtitle--about{
+  .section__title .section__subtitle .section__subtitle--about .calltoaction__link .calltoaction{
     font-size: 50%;
-  }
+  } 
 
-  .calltoaction__link{
-    font-size: 50%;
+  .area {
+    height: 100vh;
   }
-
-  .calltoaction__icon{
-    height: 20px;
-    width: 20px;
-  }
-  
 
   .services__body {
     display: flex;
@@ -402,16 +390,24 @@ section {
 
   
   .titleText {
-    font-size: 16px;
+    width: 100%;
+    font-size: 18px;
+    word-wrap: break-word;
+    word-break: normal;
   }
   
   p {
     font-size: 1em;
   }
 
+.project-item {
+  margin-left: auto;
+  margin-right: auto;
+}
 
   
   .navbar {
+    position: relative;
     margin-left: 25%;
     margin-right: 2%;
     display: flex;
@@ -427,13 +423,10 @@ section {
 
   
   .logo img {
+    position: relative;
     width: 150px;
     height: 50px;
-  
-  }
-  
-  .more-container span {
-    font-size: 50%;
+    
   }
 
   .flex-container{
@@ -444,6 +437,58 @@ section {
 
   .image-container img{
     width: 100%;
+  }
+
+  .contactForm{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    color: var(--clr-white);
+    text-align: center;
+    
+  }
+  
+  .contact-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+  }
+  
+  .contact-flex label {
+    flex-basis: 20%;
+    margin: 10px;
+    font-size: var(--fs-h3);
+  }
+  
+  .contact-flex input {
+    margin: 10px;
+    width: 100%;
+    border-radius: 1em;
+    border: none;
+  }
+  
+  .contact-flex input:focus{
+    border: 1px rgba(63, 63, 245, 0.842);
+  }
+  
+  .contact-flex textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    height: 15vh;
+    border-radius: 1em;
+    border: none;
+    resize: none;
+  }
+
+  .service {
+    width: 60vw;
+    line-height: 2;
+    margin: 20px;
   }
   
   }

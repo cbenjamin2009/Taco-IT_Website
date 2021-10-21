@@ -13,11 +13,12 @@ body{
 
 .area{
     background: #6068f5;  
-    background: -webkit-linear-gradient(to left, #6068f5, #FFFFFF);  
-    width: 100%;
-    height:100%;
-    
-   
+    background: -webkit-linear-gradient(to left, #6068f5, #000557);  
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-size: cover;
+   z-index: -1;
 }
 
 .circles{
