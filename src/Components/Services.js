@@ -9,9 +9,9 @@ function Services() {
 
     return (
         <>
-        <section class="my-services" id="services">
-            <h2 class="section__title section__title--services">What We Do</h2>
-            <div class="services__body">
+        <section class="w-full" id="services">
+            <h2 class="text-xl lg:text-3xl font-bold leading-loose text-center">What We Do</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 space-x-6 mx-2 lg:mx-10 my-2 lg:my-6">
                 <Service 
                     ServiceTitle={"Develop"} 
                     ServiceDescription={"We offer a wide variety of development services. We offer custom Website Development, Application Development, Mobile App Development, and Scripting/Automation services. You can't always buy a solution off the shelf, let us come up with a custom development solution for your business to give you the competitive edge in your market. We are always exploring new technologies to better suit our customers"} 

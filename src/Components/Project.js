@@ -2,10 +2,10 @@
 function Project({id, link, image, alt, label}) {
     return (
         <div className="project__item">
-                <div className="project-item">
+                <div className="hover:scale-150">
                     <a href={link} id={id} className="portfolio__item">
-                        <img src={image} alt={alt} className="portfolio__img"/> 
-                        <label className="project-label" htmlFor={id}>{label}</label>
+                        <img src={image} alt={alt} height={200} width={200} className=""/> 
+                        <label className="" htmlFor={id}>{label}</label>
                     </a>
                 </div>
         </div>
