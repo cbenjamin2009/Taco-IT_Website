@@ -7,7 +7,7 @@ function HomePage() {
     return (
         <div className="App">
             <WallPaper />
-            <div className="top-nav">
+            <div className="flex flex-col md:flex-row items-center py-2 mx-2 justify-between">
             <Logo />
             <Nav />
             </div>
