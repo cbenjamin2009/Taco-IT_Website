@@ -13,9 +13,9 @@ function Work() {
     return (
         <>
         <div className="my-work" id="work">
-            <h2 className="section__title section__title--mywork">My Work</h2>
-            <p className="section__subtitle section__subtitle--mywork">A selction of some development projects I've created. Click on a project to view live</p>
-            <section className="project-container">
+            <h2 className="text-3xl font-bold leading-loose text-center">My Work</h2>
+            <p className="text-2xl sm:text-2xl leading-normal font-extrabold tracking-tight text-gray-900 capitalize text-center">A selction of some development projects I've created. Click on a project to view live</p>
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-x-6 space-y-6 mx-10 my-6">
             <Project id={"1"} link={"https://chapter13tacoma.org/liquidation-calculator/"} image={Project01Thumb} alt={"A thumbnail of the liquidation calcualtor project"} label={"Custom Liquidation Calculator"}/>
             
             <Project id={"7"} link={"https://cbenjamin2009.github.io/rhcbwedding/#"} image={Project07Thumb} alt={"A website for a local couple's wedding"} label={"A wedding website"}/>

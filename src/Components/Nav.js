@@ -13,89 +13,82 @@ import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import BusinessIcon from '@mui/icons-material/Business';
 
 function Nav() {
-    const [active, setActive] = useState('Home')
+    // const [active, setActive] = useState('Home')
 
-    let nav;
-    let icon;
+    // let nav;
+    // let icon;
 
-    //cleanup all active class states 
-    function cleanup(){
-        let allnav = document.querySelectorAll('.nav-link')
-        allnav.forEach(e => e.classList.remove('active'))
-    }
+    // //cleanup all active class states 
+    // function cleanup(){
+    //     let allnav = document.querySelectorAll('.nav-link')
+    //     allnav.forEach(e => e.classList.remove('active'))
+    // }
 
         //set active class based on link clicked. 
-    switch(active){
-        case 'Contact': 
-            cleanup();
-            nav = document.getElementById('nav-link-contact')
-            nav.classList.add('active');
-            icon = document.getElementById('ContactIcon')
-            icon.classList.add('active')
-            break;
-        case 'About':
-            cleanup();
-            nav = document.getElementById('nav-link-about')
-            nav.classList.add('active')
-            icon = document.getElementById('AboutIcon')
-            icon.classList.add('active')
-            break;
-        case 'Services':
-            cleanup();
-            nav = document.getElementById('nav-link-services')
-            nav.classList.add('active')
-            icon = document.getElementById('ServicesIcon')
-            icon.classList.add('active')
-            break;
-        case 'Work':
-            cleanup();
-            nav = document.getElementById('nav-link-work')
-            nav.classList.add('active')
-            icon = document.getElementById("WorkIcon")
-            icon.classList.add('active')
-            break;
-        default:
-            cleanup();
-            nav = document.getElementById('nav-link-home')
-            // nav.classList.add('active')
-            break;
-    }
+    // switch(active){
+    //     case 'Contact': 
+    //         cleanup();
+    //         nav = document.getElementById('nav-link-contact')
+    //         nav.classList.add('active');
+    //         icon = document.getElementById('ContactIcon')
+    //         icon.classList.add('active')
+    //         break;
+    //     case 'About':
+    //         cleanup();
+    //         nav = document.getElementById('nav-link-about')
+    //         nav.classList.add('active')
+    //         icon = document.getElementById('AboutIcon')
+    //         icon.classList.add('active')
+    //         break;
+    //     case 'Services':
+    //         cleanup();
+    //         nav = document.getElementById('nav-link-services')
+    //         nav.classList.add('active')
+    //         icon = document.getElementById('ServicesIcon')
+    //         icon.classList.add('active')
+    //         break;
+    //     case 'Work':
+    //         cleanup();
+    //         nav = document.getElementById('nav-link-work')
+    //         nav.classList.add('active')
+    //         icon = document.getElementById("WorkIcon")
+    //         icon.classList.add('active')
+    //         break;
+    //     default:
+    //         cleanup();
+    //         nav = document.getElementById('nav-link-home')
+    //         // nav.classList.add('active')
+    //         break;
+    // }
     
     return (
-        <Router>
-        <nav>
-            <ul className="navbar">
-                <li className="navbar__item"> 
-                    <Link to={'/'} id="nav-link-home" className="nav-link active" onClick={()=>setActive('Home')} ><HomeIcon id="HomeIcon" className="nav-link active"/> Home</Link>
+        <nav className="">
+            <ul className="w-full flex flex-grow lg:flex lg:items-center lg:w-auto space-x-4 text-white mr-10">
+                <li className="flex flex-col items-center"> 
+                    <HomeIcon id="HomeIcon" className=""/>
+                    <a href='#' id="nav-link-home" className="">Home</a>
                 </li>
-                <li className="navbar__item"> 
-                    <Link to={'/contact'} id="nav-link-contact"  className="nav-link" onClick={()=>setActive('Contact')} ><ContactMailIcon id="ContactIcon" className="nav-link"/> Contact</Link>
+                <li className="flex flex-col items-center"> 
+                    <ContactMailIcon id="ContactIcon" className=""/>
+                    <a href='#contact' id="nav-link-contact"  className="" >Contact</a>
                 </li>
-                <li className="navbar__item">
-              
-                    <Link to={'/about'} id="nav-link-about"  className="nav-link"  onClick={()=>setActive('About')}> <InfoIcon id="AboutIcon" className="nav-link"/> About</Link>
+                <li className="flex flex-col items-center">
+                <InfoIcon id="AboutIcon" className=""/>
+                    <a href='#about' id="nav-link-about"  className="" >About</a>
                 </li>
-                <li className="navbar__item">
-                  
-                    <Link to={'/services'} id="nav-link-services"  className="nav-link"  onClick={()=>setActive('Services')}>  <DesignServicesIcon id="ServicesIcon"  className="nav-link"/> Services</Link>
+                <li className="flex flex-col items-center">
+                <DesignServicesIcon id="ServicesIcon"  className=""/>
+                    <a href='#services' id="nav-link-services"  className="">Services</a>
                 </li>
-                <li className="navbar__item">
-                    
-                    <Link to={'/work'} id="nav-link-work"  className="nav-link" onClick={()=>setActive('Work')}><BusinessIcon id="WorkIcon" className="nav-link"/> My Work </Link>
+                <li className="flex flex-col items-center">
+                <BusinessIcon id="WorkIcon" className=""/>
+                    <a href='#work' id="nav-link-work"  className="">My Work </a>
                 </li>
 
             </ul>
 
-            <Switch>
-                <Route exact path='/' component={Home} />
-                <Route path='/Contact' component={Contact} />
-                <Route path='/About' component={About} />
-                <Route path='/Services' component={Services} />
-                <Route path='/Work' component={Work} />
-                <Route component={ErrorPage} />
-            </Switch>
         </nav>
-        </Router>
+    
     )
 }
 
