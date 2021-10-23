@@ -11,7 +11,7 @@ import Footer from './Footer';
 
 function HomePage() {
     return (
-        <div className="App">
+        <div className="App w-screen overflow-x-hidden m-0">
             <WallPaper />
             <div className="flex flex-col md:flex-row items-center py-2 mx-2 justify-between">
             <Logo />
