@@ -10,7 +10,7 @@ function Services() {
     return (
         <>
         <section class="w-full" id="services">
-            <h2 class="text-xl lg:text-3xl font-bold leading-loose text-center">What We Do</h2>
+            <h2 class="text-xl lg:text-3xl font-bold leading-loose text-center">Our <span className="text-indigo-600">Services</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 space-x-6 mx-2 lg:mx-10 my-2 lg:my-6">
                 <Service 
                     ServiceTitle={"Develop"} 

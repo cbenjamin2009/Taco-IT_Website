@@ -10,7 +10,7 @@ function Home() {
                     <span className="">Let's Taco Bout Your IT Needs Today!</span>   
                 </div>
                 <div className="display cursor-pointer">
-                    <a className="text-xl md:text-2xl flex flex-col items-center text-center " to={'/Contact'}><ContactMailIcon id="ContactIcon" className="calltoaction__icon" style={{width: '40px', height: '40px', paddingRight: '10px'}} />Contact Us Today</a>
+                    <a className="text-xl md:text-2xl flex flex-col items-center text-center " href='#contact'><ContactMailIcon id="ContactIcon" className="calltoaction__icon" style={{width: '40px', height: '40px', paddingRight: '10px'}} />Contact Us Today</a>
                     
                 </div>
             </div>

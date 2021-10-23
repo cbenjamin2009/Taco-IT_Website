@@ -82,7 +82,7 @@ function Nav() {
                 </li>
                 <li className="flex flex-col items-center">
                 <BusinessIcon id="WorkIcon" className=""/>
-                    <a href='#work' id="nav-link-work"  className="">My Work </a>
+                    <a href='#work' id="nav-link-work"  className="">Work </a>
                 </li>
 
             </ul>
