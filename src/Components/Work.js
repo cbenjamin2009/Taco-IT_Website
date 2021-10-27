@@ -1,8 +1,6 @@
 import React from 'react'
 import Project01Thumb from '../Images/Project-01-small.png'
-import Project02Thumb from '../Images/Project-02-small.png'
 import Project03Thumb from '../Images/Project-03-small.png'
-import Project04Thumb from '../Images/Project-04-small.png'
 import Project05Thumb from '../Images/Project-05-small.png'
 import Project06Thumb from '../Images/Project-06-small.png'
 import Project07Thumb from '../Images/Project-07-small.png'
@@ -27,10 +25,8 @@ function Work() {
             <Project id={"10"} link={"https://hulu2-react-next-tailwind.vercel.app/?genre=fetchComedyMovies"} image={Project10Thumb} alt={"A Hulu Clone Website showing streamable movies"} label={"Hulu Website Clone"} />
             <Project id={"6"} link={"https://linkedin-clone-92304.web.app/"} image={Project06Thumb} alt={"A thumbnail of a linked in clone"} label={"LinkedIn Clone React Firebase"}/>
             <Project id={"3"} link={"/Demo/Sample-Restaurant-Site/index.html"} image={Project03Thumb} alt={"A taco food truck website"} label={"Sample Restaurant Site"}/>
-            {/* <Project id={"4"} link={"project-04-tic-tac-toe.html"} image={Project04Thumb} alt={"A thubmail of tic tac toe game"} label={"Taco Vs. Burrito"}/> */}
             <Project id={"5"} link={"/project-05-react-calc.html"} image={Project05Thumb} alt={"A calculator"} label={"Working Formula Based Calculator"}/>
             <Project id={"11"} link={"https://codepen.io/WillCodeForTacos/full/OJjWmOP"} image={Project11Thumb} alt={"A password generator program"} label={"Password Generator"}/>
-           {/* <Project id={"2"} link={"https://codepen.io/WillCodeForTacos/full/vYgPRqM"} image={Project02Thumb} alt={"A thumbnail of the rock paper scissors project"} label={"Simple Intuitive Game"}/>  */}
            </section>
         </div>
     </>
