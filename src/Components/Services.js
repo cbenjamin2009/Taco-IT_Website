@@ -24,7 +24,7 @@ function Services() {
                 />
                 <Service
                 ServiceTitle={"Manage"}
-                ServiceDescription={"We can manage any IT project for your business. From building relactions to implementation of new technology software and hardware. We also provide software for managing the systems (Network, Firewall, Switches, Servers, Virtual Machines, Clusters, Remote Desktop Session Servers, Workstations, etc.) in your business as an outside IT professional without the overhead of a full time staffed IT department."}
+                ServiceDescription={"We can manage any IT project for your business. From building relocations to implementation of new technology software and hardware. We also provide software for managing the systems (Network, Firewall, Switches, Servers, Virtual Machines, Clusters, Remote Desktop Session Servers, Workstations, etc.) in your business as an outside IT professional without the overhead of a full time staffed IT department."}
                 ServiceImage={Manage}
                 />
                
