@@ -15,11 +15,13 @@ function Services() {
                     ServiceTitle={"Develop"} 
                     ServiceDescription={"Website Development"} 
                     ServiceImage={Develop}
+                    LinkTo={"/develop"}
                 />
                 <Service 
                     ServiceTitle={"Consult"} 
                     ServiceDescription={"Professional IT Consulting"} 
                     ServiceImage={Consult}
+                    LinkTo={"/consult"}
                 />
                 <Service
                 ServiceTitle={"Manage"}
