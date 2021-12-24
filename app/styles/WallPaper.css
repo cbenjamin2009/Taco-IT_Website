@@ -9,6 +9,11 @@ body{
     font-family: 'Exo', sans-serif;
 }
 
+html {
+    margin: 0px;
+    overflow-x: hidden;
+}
+
 
 
 .area{
