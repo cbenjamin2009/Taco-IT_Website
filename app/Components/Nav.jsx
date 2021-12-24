@@ -11,7 +11,7 @@ function Nav() {
             <ul className="w-full flex flex-grow lg:flex lg:items-center lg:w-auto space-x-4 text-white mr-10">
                 <li className="flex flex-col items-center"> 
                     <HomeIcon/>
-                    <a href='#' id="nav-link-home">Home</a>
+                    <a href='/' id="nav-link-home">Home</a>
                 </li>
                 <li className="flex flex-col items-center"> 
                     <ContactMailIcon/>
