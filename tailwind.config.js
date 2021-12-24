@@ -1,14 +1,8 @@
-// tailwind.config.css
 module.exports = {
-    purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-    darkMode: false, // or 'media' or 'class'
-    theme: {
-        extend: {},
+  purge: ["./app/**/*.{js,jsx}"], // Here we are going to tell Tailwind to use any javascript .js or .jsx file
+  theme: { extend: {
 
-    },
-    variants: {
-        extend: {},
-
-    },
-    plugins: [],
-}
+  } },
+  variants: {},
+  plugins: [], 
+};
