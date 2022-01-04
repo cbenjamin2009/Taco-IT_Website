@@ -11,7 +11,7 @@ function Home() {
                     <TypeWriter typing={typingSpeed}>Let's Taco Bout Your IT Needs Today!</TypeWriter>
                 </div>
                 <div className="display cursor-pointer">
-                    <a className="text-xl md:text-2xl flex flex-col items-center text-center border-2 border-solid border-grey-600 rounded-lg p-4" href='#contact'>Contact Us Today</a>
+                    <a className="text-xl md:text-2xl flex flex-col items-center text-center border-2 border-solid border-grey-600 rounded-lg p-4 hover:bg-slate-200" href='#contact'>Contact Us Today</a>
                     
                 </div>
             </div>

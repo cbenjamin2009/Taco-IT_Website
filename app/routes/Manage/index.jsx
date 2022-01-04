@@ -24,7 +24,7 @@ export default function Manage() {
             <Nav />
             </div>
         </div>
-        <section className="w-2/3 mx-auto bg-indigo-400 mt-10 p-10">
+        <section className="w-full md:w-2/3 mx-auto bg-indigo-400 mt-10 p-10">
             <h3 className="text-3xl text-black text-center pb-10">Managed Services</h3>
             <img className="mx-auto my-8 rounded-lg" style={{maxWidth: "200px", maxHeight: "200px", objectFit: "cover"}} src={ManagingImage} alt=""></img>
             <br />

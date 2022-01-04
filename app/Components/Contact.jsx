@@ -41,8 +41,8 @@ function Contact() {
                     <label htmlFor="message" className="absolute top-0 text-lg bg-white p-4 -z-1 duration-300 origin-0">Message:</label>
 
                 </div>
-                <div className="mx-auto bg-indigo-600 text-center w-24 rounded-lg h-14 items-center">
-                    <button className="bg-transparent mt-3 text-white text-xl" type="submit" value="Submit">Submit</button>
+                <div className="mx-auto bg-indigo-600 text-center w-24 rounded-lg h-14 items-center hover:bg-slate-800 hover:text-white">
+                    <button className="bg-transparent mt-3 text-white text-xl hover:bg-slate-800 hover:text-white" type="submit" value="Submit">Submit</button>
                 </div>
                     <input type="hidden" name="replyTo" value="chris@taco-it.com"/> 
                     <input type="hidden" name="redirectTo" value="https://taco-it.com"/> 
