@@ -32,6 +32,8 @@ export default function Manage() {
             <div className="managedOfferingParent">
                 <ManagedOfferings />
             </div>
+
+        
         </section>
         <Footer />
         

@@ -6,7 +6,7 @@ import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
 
 function ManagedOfferings() {
     return (
-        <div className="manageSection">
+        <section className="manageSection">
         
             <div className="flex flex-row p-4 space-x-4 ">
             <WebIcon fontSize="large" color="info"/>
@@ -24,8 +24,10 @@ function ManagedOfferings() {
             <DashboardCustomizeIcon fontSize="large" color="info"/>
             <Offerings title={'Custom Web Feature'} info={'Want a custom feature on your website without having to build a new site? We can schedule a meeting to talk about your project and taco bout it!'}/>
             </div>
-        
-        </div>
+
+
+                
+        </section>
     )
 }
 
