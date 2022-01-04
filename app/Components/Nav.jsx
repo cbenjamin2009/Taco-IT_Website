@@ -15,15 +15,15 @@ function Nav() {
                 </li>
                 <li className="flex flex-col items-center"> 
                     <ContactMailIcon/>
-                    <a href='#contact' id="nav-link-contact"  >Contact</a>
+                    <a href='/#contact' id="nav-link-contact"  >Contact</a>
                 </li>
                 <li className="flex flex-col items-center">
                 <InfoIcon />
-                    <a href='#about' id="nav-link-about"  >About</a>
+                    <a href='/#about' id="nav-link-about"  >About</a>
                 </li>
                 <li className="flex flex-col items-center">
                 <DesignServicesIcon />
-                    <a href='#services' id="nav-link-services" >Services</a>
+                    <a href='/#services' id="nav-link-services" >Services</a>
                 </li>
 
             </ul>

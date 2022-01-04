@@ -2,7 +2,7 @@
 
 function Offerings({title, info}) {
     return (
-           <div className="ml-4">
+           <div className="">
            <p className="text-xl">{title}</p>
             <p>{info}</p>
            </div>           
