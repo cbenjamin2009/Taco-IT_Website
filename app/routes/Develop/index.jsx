@@ -15,7 +15,7 @@ export let links = () => {
 export default function Manage() {
  
     return (
-        <div className="App w-screen overflow-hidden h-screen bg-indigo-500">
+        <div className="App w-screen overflow-hidden h-auto min-h-screen bg-indigo-500">
         <div className="w-full">
             <div className="flex flex-col md:flex-row items-center justify-between">               
             <Logo />

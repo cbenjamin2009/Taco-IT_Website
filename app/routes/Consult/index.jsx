@@ -14,10 +14,10 @@ export default function Manage() {
             <Nav />
             </div>
         </div>
-        <section className="w-2/3 mx-auto bg-indigo-400 mt-10 p-10">
+        <section className="w-full mx-auto bg-indigo-400 mt-10 p-10">
             <h3 className="text-3xl text-black text-center pb-10">Consulting Services</h3>
             <div className="">
-            <img className="mx-auto my-8 rounded-lg" style={{maxWidth: "400px", maxHeight: "400px", objectFit: "cover"}} src={ConsultingImage} alt=""></img>
+            <img className="w-60 h-60 mx-auto my-8 rounded-lg" src={ConsultingImage} alt=""></img>
             </div>
             <br /><p className="mx-10 py-6">{consultData}</p>
         </section>
