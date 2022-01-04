@@ -2,7 +2,7 @@ import Skill from './Skill'
 function Skills() {
     return (
         <div className="skills mt-6 w-full mx-auto justify-center text-center">
-            <div className="skillsGrid w-full grid sm:grid-cols-3 lg:grid-cols-5 grid-cols-4 gap-6 mx-auto lg:mx-20 ">
+            <div className="skillsGrid w-full grid sm:grid-cols-3 lg:grid-cols-5 grid-cols-4 gap-6 mx-auto ">
                 <Skill source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="The logo icon for react" title="React"/>
                 <Skill source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="The logo icon for HTML 5" title="HTML 5"/>
                 <Skill source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt="The logo icon for CSS3" title="CSS 3"/>
