@@ -10,8 +10,8 @@ body{
 }
 
 html {
-    margin: 0px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 

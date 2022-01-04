@@ -8,22 +8,22 @@ function Nav() {
       
     return (
         <nav className="">
-            <ul className="w-full flex lg:flex lg:items-center lg:w-auto space-x-10 text-2xl text-white mr-10 sm:mt-10">
+            <ul className="w-full flex lg:flex lg:items-center lg:w-auto space-x-4 md:space-x-10 text-2xl text-white mr-10 sm:mt-10">
                 <li className="flex flex-col items-center"> 
                     <HomeIcon/>
                     <a href='/' id="nav-link-home">Home</a>
                 </li>
                 <li className="flex flex-col items-center"> 
                     <ContactMailIcon/>
-                    <a href='#contact' id="nav-link-contact"  >Contact</a>
+                    <a href='/#contact' id="nav-link-contact"  >Contact</a>
                 </li>
                 <li className="flex flex-col items-center">
                 <InfoIcon />
-                    <a href='#about' id="nav-link-about"  >About</a>
+                    <a href='/#about' id="nav-link-about"  >About</a>
                 </li>
                 <li className="flex flex-col items-center">
                 <DesignServicesIcon />
-                    <a href='#services' id="nav-link-services" >Services</a>
+                    <a href='/#services' id="nav-link-services" >Services</a>
                 </li>
 
             </ul>
