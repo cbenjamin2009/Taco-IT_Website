@@ -3,10 +3,10 @@ import React from 'react'
 function About() {
     return (
         <>
-       <section class="w-full h-auto min-h-screen mx-4 py-2" id="about">
+       <section class="w-full h-auto min-h-screen mx-4 py-2 break-words" id="about">
             <p class="text-center text-1xl md:text-2xl lg:text-4xl mb-2 overflow-hidden"><span className="text-indigo-600">About</span> Us</p>
 
-            <div class="p-2 w-full mx-auto">
+            <div class="p-2 w-full mx-auto ">
                 <p className="text-md md:text-1xl font-bold leading-tight lg:leading-loose mb-2 mt-2 ">Founding:</p>
                 <p className="text-xs md:text-md ml-4 xl:text-lg leading-5">Taco-IT was founded by Chris Benjamin to provide Technology services to local businesses in the Pacific Northwest. We exist to help give a technological edge to businesses who typically do not have their own 
                     internal IT department. Chris Benjamin attended Devry University where he earned his Bachelor of Computer Science while studying web application design and administration. He later went on to obtain his Masters in Computer Science focusing on IT Management to attain the skills necessary to drive businesses forward using technology. </p>
