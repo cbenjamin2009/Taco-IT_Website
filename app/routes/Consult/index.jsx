@@ -4,22 +4,6 @@ import Logo from '../../Components/Logo';
 import ConsultingImage from '../../Images/consulting.jpg'
 import Footer from '../../Components/Footer'
 
-import { meta } from 'remix'
-
-
-export function meta() {
-    const description = "Computer IT Consulting Company serving Small and Medium sized businsses in Tacoma area of Washington. We can help with any IT project you have, big or small!";
-    return { 
-      description,
-      keywords: "IT Consulting, IT Project Conuslting, Hardware Consulting Services, Website Consulting Services, Managed IT Consulting Services, IT Department consulting services Tacoma WA, Puyallup WA, Business Website, Wordpress",
-      "twitter:image": "https://www.taco-it.com/build/_assets/Website_Logo-NUJUZPJQ.png",
-      "twitter:card": "summary_large_image",
-      "twitter:creator": "@_ChrisBenjamin",
-      "twitter:site": "@_ChrisBenjamin",
-      "twitter:title": "Taco-IT",
-      "twitter:description": description
-      };
-    }
 
 
 export default function Manage() {
