@@ -8,7 +8,7 @@ function Contact() {
     }
 
     return (
-        <section id="contact" className="max-w-screen-md mx-auto p-2 pt-10">
+        <section id="contact" className="max-w-screen-md min-h-screen h-auto mx-auto p-2 pt-10">
         <div className="">
             <h2 className=" text-center text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900 capitalize overflow-hidden">Contact us <span className="text-indigo-600">today</span></h2>
             <h4 className="my-2 px-2 text-center">Fill out the form below and we will reply within 1 business day, we look forward to meeting you and discussing your business needs.</h4>
@@ -18,7 +18,7 @@ function Contact() {
                 <input type="text" name="honeypot" style={{display: 'none'}}/>
                 <div className="outline relative border-2 focus-within:border-blue-500">
                     <input className="block p-4 w-full text-lg appearance-none focus:outline-none bg-transparent" type="text" name="name"/>
-                    <label htmlFor="name" className="absolute top-0 text-lg bg-white p-4 -z-1 duration-300 origin-0">Name:</label>
+                    <label htmlFor="name" className="absolute -top-8 text-lg bg-white p-4 -z-1 duration-300 origin-0">Name:</label>
 
                 </div>
                 <div className="outline relative border-2 focus-within:border-blue-500 ">

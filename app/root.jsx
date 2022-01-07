@@ -16,7 +16,17 @@ export let links = () => {
 };
 
 export function meta() {
-  return { title: "Taco-IT Managed IT Service Provider and Web Designer" };
+  const description = "Taco-IT - Website Design, Managed IT Services and Consulting Company serving Tacoma South Puget Sound area of Washington";
+  return { 
+    description,
+    keywords: "Taco-IT, TacoIT, IT Services Tacoma, IT Services Puyallup, Website Design Tacoma, Website Creator Tacoma, Web design tacoma, web design puyallup, computer company tacoma, computer company puyallup",
+    "twitter:image": "https://www.taco-it.com/build/_assets/Website_Logo-NUJUZPJQ.png",
+    "twitter:card": "summary_large_image",
+    "twitter:creator": "@_ChrisBenjamin",
+    "twitter:site": "@_ChrisBenjamin",
+    "twitter:title": "Taco-IT",
+    "twitter:description": description
+    };
 }
 
 export default function App() {

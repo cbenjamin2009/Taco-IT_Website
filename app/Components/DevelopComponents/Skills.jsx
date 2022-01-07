@@ -1,4 +1,5 @@
-import Skill from './Skill'
+import Skill from './Skill' 
+import RemixImage from '../../Images/remix_glowing.svg'
 function Skills() {
     return (
         <div className="skills mt-6 w-full mx-auto justify-center text-center">
@@ -6,6 +7,7 @@ function Skills() {
                 <Skill source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="The logo icon for react" title="React"/>
                 <Skill source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="The logo icon for HTML 5" title="HTML 5"/>
                 <Skill source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt="The logo icon for CSS3" title="CSS 3"/>
+                <Skill source={RemixImage} alt="The logo icon for Remix" title="Remix"/>
                 <Skill source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" alt="The logo icon for TailwindCSS" title="Twilwind CSS"/>
                 <Skill source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" alt="The logo icon for NextJS" title="Next.JS"/>
                 <Skill source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="The logo icon for Bootstrap" title="Bootstrap"/>

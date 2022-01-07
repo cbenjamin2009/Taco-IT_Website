@@ -6,6 +6,23 @@ import Footer from '../../Components/Footer'
 import ManagingImage from '../../Images/managing.png'
 import managestyles from "../../styles/manage.css";
 
+import { meta } from 'remix'
+
+
+export function meta() {
+    const description = "Managed IT Services Company serving Small and Medium sized businsses in Tacoma area of Washington";
+    return { 
+      description,
+      keywords: "Managed Services Tacoma, MSP Tacoma, Managed Anti-Virus, Onsite Support, Managed Patches, Managed Spam, Managed Email, Remote Support, Managed Backup, Managed Office 365, Managed Microsoft 365, Managed Computer Services, Business Computer Services",
+      "twitter:image": "https://www.taco-it.com/build/_assets/Website_Logo-NUJUZPJQ.png",
+      "twitter:card": "summary_large_image",
+      "twitter:creator": "@_ChrisBenjamin",
+      "twitter:site": "@_ChrisBenjamin",
+      "twitter:title": "Taco-IT",
+      "twitter:description": description
+      };
+  }
+
 
 export let links = () => {
   return [

@@ -6,6 +6,22 @@ import Skills from '../../Components/DevelopComponents/Skills';
 
 import managestyles from "../../styles/manage.css";
 
+import { meta } from 'remix'
+
+
+export function meta() {
+    const description = "Web Design and Development Services Company serving Small and Medium sized businsses in Tacoma area of Washington";
+    return { 
+      description,
+      keywords: "Web Design, Website Design, Website Consultation, Web Consultation, Cheap Website, Website Creator, Tacoma WA, Puyallup WA, Business Website, Wordpress",
+      "twitter:image": "https://www.taco-it.com/build/_assets/Website_Logo-NUJUZPJQ.png",
+      "twitter:card": "summary_large_image",
+      "twitter:creator": "@_ChrisBenjamin",
+      "twitter:site": "@_ChrisBenjamin",
+      "twitter:title": "Taco-IT",
+      "twitter:description": description
+      };
+    }
 
 export let links = () => {
   return [
