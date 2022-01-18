@@ -1,4 +1,4 @@
-import React from "react";
+import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 
 function Contact() {
   function handleClick(e) {
@@ -14,8 +14,11 @@ function Contact() {
         <h2 className=" text-center text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900 capitalize overflow-hidden">
           Contact us <span className="text-indigo-600">today</span>
         </h2>
+        <div className="phone text-center mt-2">
+                <a className="text-blue-400 items-center text-xl" href="tel:+13603625004"><PhoneInTalkIcon /> Click to Call!</a>
+            </div>
         <h4 className="my-2 px-2 text-center">
-          Fill out the form below and we will reply within 1 business day, we
+         Or  Fill out the form below and we will reply within 1 business day, we
           look forward to meeting you and discussing your business needs.
         </h4>
 
