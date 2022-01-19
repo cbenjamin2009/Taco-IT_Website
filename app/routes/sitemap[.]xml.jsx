@@ -1,24 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
+export const loader = () => {
+  // handle "GET" request
+	const content = `
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
+	<url>
 	<loc>https://www.taco-it.com/</loc>
 	<lastmod>2022-01-08T00:15:16+01:00</lastmod>
 	<priority>1.0</priority>
-</url>
-<url>
+	</url>
+	<url>
 	<loc>https://www.taco-it.com/develop</loc>
 	<lastmod>2022-01-08T00:15:16+01:00</lastmod>
 	<priority>1.0</priority>
-</url>
-<url>
+	</url>
+	<url>
 	<loc>https://www.taco-it.com/consult</loc>
 	<lastmod>2022-01-08T00:15:16+01:00</lastmod>
 	<priority>1.0</priority>
-</url>
-<url>
+	</url>
+	<url>
 	<loc>https://www.taco-it.com/manage</loc>
 	<lastmod>2022-01-08T00:15:16+01:00</lastmod>
 	<priority>1.0</priority>
-</url>
-</urlset>
+	</url>
+	</urlset>
+	`
+	
+	return new Response(content,{
+	  status: 200,
+	  headers: {
+		"Content-Type": "application/xml",
+		"xml-version": "1.0",
+		"encoding": "UTF-8"
+	  }
+
+	  
+	});
+};
+
