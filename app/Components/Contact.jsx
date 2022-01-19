@@ -8,7 +8,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="max-w-screen-md min-h-screen h-auto mx-auto p-2 pt-10"
+      className="relative max-w-screen-md min-h-screen h-auto mx-auto p-2 pt-10 pb-4"
     >
       <div className="">
         <h2 className=" text-center text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900 capitalize overflow-hidden">

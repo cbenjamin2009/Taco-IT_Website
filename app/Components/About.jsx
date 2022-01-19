@@ -4,18 +4,18 @@ function About() {
   return (
     <>
       <section
-        class="w-full h-auto min-h-screen mx-4 py-2 break-words"
+        class="relative w-full h-auto min-h-screen mx-4 py-2 break-words sm:my-10"
         id="about"
       >
         <p class="text-center text-1xl md:text-2xl lg:text-4xl mb-2 overflow-hidden">
           <span className="text-indigo-600">About</span> Us
         </p>
 
-        <div class="p-2 w-full mx-auto ">
+        <div class="p-2 w-full">
           <p className="text-md md:text-1xl font-bold leading-tight lg:leading-loose mb-2 mt-2 ">
             Founding:
           </p>
-          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5">
+          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5  mx-10 px-10">
             Taco-IT was founded by Chris Benjamin to provide Technology services
             to local businesses in the Pacific Northwest. We exist to help give
             a technological edge to businesses who typically do not have their
@@ -25,7 +25,7 @@ function About() {
             his Masters in Computer Science focusing on IT Management to attain
             the skills necessary to drive businesses forward using technology.{" "}
           </p>
-          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5">
+          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5  mx-10 px-10">
             Chris has worked for several local technology companies from a local
             school district, a pharmacy support company, and as a the IT Manager
             for a medium size medical practice. Technology is his passion and
@@ -37,7 +37,7 @@ function About() {
           <p className="text-md md:text-1xl font-bold leading-tight lg:leading-loose mb-2 mt-2 ">
             Our Why:
           </p>
-          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5">
+          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5  mx-10 px-10">
             To empower businesses to utilize technology as an asset. Let the
             power of technology in todays' digital world work for you so you can
             focus on your own innovations.
@@ -46,7 +46,7 @@ function About() {
           <p className="text-md md:text-1xl font-bold leading-tight lg:leading-loose mb-2 mt-2 ">
             Our Mission:{" "}
           </p>
-          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5">
+          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5  mx-10 px-10">
             Our mission is to help your company stand out on the internet so
             that your customers can find you and learn about your business. Let
             us handle the technical aspects and you handle your passion
@@ -56,7 +56,7 @@ function About() {
             Our What:
           </p>
 
-          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5">
+          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5  mx-10 px-10">
             Our expertise is technology, your expertise is the foundation of
             your business. Let's work together to see what aspects of technology
             can be implemented that will help your business be efficient,
@@ -70,7 +70,7 @@ function About() {
           <p className="text-md md:text-1xl font-bold leading-tight lg:leading-loose mb-2 mt-2 ">
             Our How:
           </p>
-          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5">
+          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5  mx-10 px-10">
             With over 15 years of professional experience in the Pacific
             Northwest, in multiple industry verticles, we possess strong market
             knowledge of products and services that can be applied to empower

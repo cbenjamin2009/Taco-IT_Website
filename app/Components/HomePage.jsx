@@ -17,13 +17,13 @@ function HomePage() {
                 </div>
                 <Home />
             </div>
-            <div className="services-container bg-gray-200 h-auto lg:h-screen w-screen m-0 p-0 overflow-hidden">
+            <div className="services-container bg-gray-200  min-h-screen h-auto w-screen m-0 p-0 overflow-hidden">
                 <Services />
             </div>
-            <div className="contact-container h-screen">
+            <div className="contact-container min-h-screen h-auto">
                 <Contact />
             </div>
-            <div className="about-container bg-gray-700 text-white lg:h-screen">
+            <div className="about-container bg-gray-700 text-white  min-h-screen h-auto">
                 <About />
             </div>
             <div className="footer-container h-40 bg-gray-200">
