@@ -1,4 +1,5 @@
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
 
 function Contact() {
   function handleClick(e) {
@@ -15,7 +16,8 @@ function Contact() {
           Contact us <span className="text-indigo-600">today</span>
         </h2>
         <div className="phone text-center mt-2">
-                <a className="text-blue-400 items-center text-xl" href="tel:+13603625004"><PhoneInTalkIcon /> Click to Call!</a>
+                <a className="text-blue-400 items-center text-xl" href="tel:+13603625004"><PhoneInTalkIcon /> Click to Call!</a> <br/>
+                Existing Customer? <a className="text-blue-400 items-center text-xl" href="mailto:helpdesk@taco-it.com"><ConfirmationNumberIcon /> Click Here to Create a Ticket</a>
             </div>
         <h4 className="my-2 px-2 text-center">
          Or  Fill out the form below and we will reply within 1 business day, we

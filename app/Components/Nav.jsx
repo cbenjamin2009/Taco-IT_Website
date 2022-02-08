@@ -4,6 +4,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import GroupsIcon from '@mui/icons-material/Groups';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 
 function Nav() {
       
@@ -33,6 +34,10 @@ function Nav() {
                 <li className="flex flex-col items-center">
                 <ManageAccountsIcon />
                     <a href='/manage' id="nav-link-services" className="hover:bg-slate-500" >Manage</a>
+                </li>
+                <li className="flex flex-col items-center">
+                <SupportAgentIcon />
+                    <a href='http://portal.taco-it.com' id="nav-link-services" className="hover:bg-slate-500" >Portal</a>
                 </li>
 
             </ul>
