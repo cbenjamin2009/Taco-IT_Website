@@ -9,82 +9,20 @@ var entry_server_exports = {};
 __export(entry_server_exports, {
   default: () => handleRequest
 });
-import { PassThrough } from "stream";
 import { RemixServer } from "@remix-run/react";
-import { isbot } from "isbot";
-import { renderToPipeableStream } from "react-dom/server";
+import { renderToString } from "react-dom/server";
 import { jsxDEV } from "react/jsx-dev-runtime";
-var ABORT_DELAY = 5e3;
 function handleRequest(request, responseStatusCode, responseHeaders, remixContext) {
-  let userAgent = request.headers.get("user-agent");
-  return userAgent && isbot(userAgent) ? handleBotRequest(
-    request,
-    responseStatusCode,
-    responseHeaders,
-    remixContext
-  ) : handleBrowserRequest(
-    request,
-    responseStatusCode,
-    responseHeaders,
-    remixContext
+  let markup = renderToString(
+    /* @__PURE__ */ jsxDEV(RemixServer, { context: remixContext, url: request.url }, void 0, !1, {
+      fileName: "app/entry.server.jsx",
+      lineNumber: 11,
+      columnNumber: 5
+    }, this)
   );
-}
-function handleBotRequest(request, responseStatusCode, responseHeaders, remixContext) {
-  return new Promise((resolve, reject) => {
-    let didError = !1, { pipe, abort } = renderToPipeableStream(
-      /* @__PURE__ */ jsxDEV(RemixServer, { context: remixContext, url: request.url }, void 0, !1, {
-        fileName: "app/entry.server.jsx",
-        lineNumber: 43,
-        columnNumber: 7
-      }, this),
-      {
-        onAllReady() {
-          let body = new PassThrough();
-          responseHeaders.set("Content-Type", "text/html"), resolve(
-            new Response(body, {
-              status: didError ? 500 : responseStatusCode,
-              headers: responseHeaders
-            })
-          ), pipe(body);
-        },
-        onShellError(error) {
-          reject(error);
-        },
-        onError(error) {
-          didError = !0, console.error(error);
-        }
-      }
-    );
-    setTimeout(abort, ABORT_DELAY);
-  });
-}
-function handleBrowserRequest(request, responseStatusCode, responseHeaders, remixContext) {
-  return new Promise((resolve, reject) => {
-    let didError = !1, { pipe, abort } = renderToPipeableStream(
-      /* @__PURE__ */ jsxDEV(RemixServer, { context: remixContext, url: request.url }, void 0, !1, {
-        fileName: "app/entry.server.jsx",
-        lineNumber: 83,
-        columnNumber: 7
-      }, this),
-      {
-        onShellReady() {
-          let body = new PassThrough();
-          responseHeaders.set("Content-Type", "text/html"), resolve(
-            new Response(body, {
-              status: didError ? 500 : responseStatusCode,
-              headers: responseHeaders
-            })
-          ), pipe(body);
-        },
-        onShellError(error) {
-          reject(error);
-        },
-        onError(error) {
-          didError = !0, console.error(error);
-        }
-      }
-    );
-    setTimeout(abort, ABORT_DELAY);
+  return responseHeaders.set("Content-Type", "text/html"), new Response(`<!DOCTYPE html>${markup}`, {
+    status: responseStatusCode,
+    headers: responseHeaders
   });
 }
 
@@ -157,24 +95,29 @@ function App() {
       columnNumber: 7
     }, this),
     /* @__PURE__ */ jsxDEV2("body", { children: [
-      /* @__PURE__ */ jsxDEV2(Outlet, {}, void 0, !1, {
+      /* @__PURE__ */ jsxDEV2("h1", { children: "Test do you see me? " }, void 0, !1, {
         fileName: "app/root.jsx",
         lineNumber: 50,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV2(ScrollRestoration, {}, void 0, !1, {
+      /* @__PURE__ */ jsxDEV2(Outlet, {}, void 0, !1, {
         fileName: "app/root.jsx",
         lineNumber: 51,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV2(Scripts, {}, void 0, !1, {
+      /* @__PURE__ */ jsxDEV2(ScrollRestoration, {}, void 0, !1, {
         fileName: "app/root.jsx",
         lineNumber: 52,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV2(LiveReload, {}, void 0, !1, {
+      /* @__PURE__ */ jsxDEV2(Scripts, {}, void 0, !1, {
         fileName: "app/root.jsx",
         lineNumber: 53,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV2(LiveReload, {}, void 0, !1, {
+        fileName: "app/root.jsx",
+        lineNumber: 54,
         columnNumber: 52
       }, this)
     ] }, void 0, !0, {
@@ -1157,9 +1100,9 @@ function Manage3() {
   }, this);
 }
 
-// app/routes/index.jsx
-var routes_exports = {};
-__export(routes_exports, {
+// app/routes/_index.jsx
+var index_exports = {};
+__export(index_exports, {
   default: () => Index,
   links: () => links4,
   meta: () => meta5
@@ -1892,7 +1835,7 @@ var WallPaper_default = WallPaper;
 // app/styles/WallPaper.css
 var WallPaper_default2 = "/build/_assets/WallPaper-H3VIIBRO.css";
 
-// app/routes/index.jsx
+// app/routes/_index.jsx
 import { Fragment as Fragment3, jsxDEV as jsxDEV21 } from "react/jsx-dev-runtime";
 var meta5 = () => [
   { title: "Taco-IT Develop. Consult. Manage" },
@@ -1906,24 +1849,24 @@ var meta5 = () => [
 function Index() {
   return /* @__PURE__ */ jsxDEV21(Fragment3, { children: [
     /* @__PURE__ */ jsxDEV21(WallPaper_default, {}, void 0, !1, {
-      fileName: "app/routes/index.jsx",
+      fileName: "app/routes/_index.jsx",
       lineNumber: 28,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ jsxDEV21(HomePage_default, {}, void 0, !1, {
-      fileName: "app/routes/index.jsx",
+      fileName: "app/routes/_index.jsx",
       lineNumber: 29,
       columnNumber: 5
     }, this)
   ] }, void 0, !0, {
-    fileName: "app/routes/index.jsx",
+    fileName: "app/routes/_index.jsx",
     lineNumber: 27,
     columnNumber: 5
   }, this);
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-VDCPXNGX.js", imports: ["/build/_shared/chunk-O4BRYNJ4.js", "/build/_shared/chunk-TAQZM6BI.js", "/build/_shared/chunk-GNCLJJF5.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-U4FRFQSK.js", "/build/_shared/chunk-XGOTYLZ5.js", "/build/_shared/chunk-7M6SC7J5.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-SBMHMOIZ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/Consult": { id: "routes/Consult", parentId: "root", path: "Consult", index: void 0, caseSensitive: void 0, module: "/build/routes/Consult-DO32KJCW.js", imports: ["/build/_shared/chunk-Y6QMX4C4.js", "/build/_shared/chunk-6VSSU7PJ.js", "/build/_shared/chunk-B43JI2TA.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/Develop": { id: "routes/Develop", parentId: "root", path: "Develop", index: void 0, caseSensitive: void 0, module: "/build/routes/Develop-5YPPDN6G.js", imports: ["/build/_shared/chunk-XLCFM6EW.js", "/build/_shared/chunk-6VSSU7PJ.js", "/build/_shared/chunk-B43JI2TA.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/Manage": { id: "routes/Manage", parentId: "root", path: "Manage", index: void 0, caseSensitive: void 0, module: "/build/routes/Manage-OHF44IMM.js", imports: ["/build/_shared/chunk-XLCFM6EW.js", "/build/_shared/chunk-Y6QMX4C4.js", "/build/_shared/chunk-6VSSU7PJ.js", "/build/_shared/chunk-B43JI2TA.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: "index", index: void 0, caseSensitive: void 0, module: "/build/routes/index-Y5DCIICM.js", imports: ["/build/_shared/chunk-Y6QMX4C4.js", "/build/_shared/chunk-6VSSU7PJ.js", "/build/_shared/chunk-B43JI2TA.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/robots[.]txt": { id: "routes/robots[.]txt", parentId: "root", path: "robots.txt", index: void 0, caseSensitive: void 0, module: "/build/routes/robots[.]txt-BTPJRET3.js", imports: void 0, hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/sitemap[.]xml": { id: "routes/sitemap[.]xml", parentId: "root", path: "sitemap.xml", index: void 0, caseSensitive: void 0, module: "/build/routes/sitemap[.]xml-XB75Y2NN.js", imports: void 0, hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "2412254f", hmr: { runtime: "/build/_shared\\chunk-GNCLJJF5.js", timestamp: 1761712004793 }, url: "/build/manifest-2412254F.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-VDCPXNGX.js", imports: ["/build/_shared/chunk-O4BRYNJ4.js", "/build/_shared/chunk-TAQZM6BI.js", "/build/_shared/chunk-GNCLJJF5.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-U4FRFQSK.js", "/build/_shared/chunk-XGOTYLZ5.js", "/build/_shared/chunk-7M6SC7J5.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-QHYO5SK7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/Consult": { id: "routes/Consult", parentId: "root", path: "Consult", index: void 0, caseSensitive: void 0, module: "/build/routes/Consult-DO32KJCW.js", imports: ["/build/_shared/chunk-Y6QMX4C4.js", "/build/_shared/chunk-6VSSU7PJ.js", "/build/_shared/chunk-B43JI2TA.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/Develop": { id: "routes/Develop", parentId: "root", path: "Develop", index: void 0, caseSensitive: void 0, module: "/build/routes/Develop-5YPPDN6G.js", imports: ["/build/_shared/chunk-XLCFM6EW.js", "/build/_shared/chunk-6VSSU7PJ.js", "/build/_shared/chunk-B43JI2TA.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/Manage": { id: "routes/Manage", parentId: "root", path: "Manage", index: void 0, caseSensitive: void 0, module: "/build/routes/Manage-OHF44IMM.js", imports: ["/build/_shared/chunk-XLCFM6EW.js", "/build/_shared/chunk-Y6QMX4C4.js", "/build/_shared/chunk-6VSSU7PJ.js", "/build/_shared/chunk-B43JI2TA.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-2YPLNJYD.js", imports: ["/build/_shared/chunk-Y6QMX4C4.js", "/build/_shared/chunk-6VSSU7PJ.js", "/build/_shared/chunk-B43JI2TA.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/robots[.]txt": { id: "routes/robots[.]txt", parentId: "root", path: "robots.txt", index: void 0, caseSensitive: void 0, module: "/build/routes/robots[.]txt-BTPJRET3.js", imports: void 0, hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/sitemap[.]xml": { id: "routes/sitemap[.]xml", parentId: "root", path: "sitemap.xml", index: void 0, caseSensitive: void 0, module: "/build/routes/sitemap[.]xml-XB75Y2NN.js", imports: void 0, hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "3688aa4f", hmr: { runtime: "/build/_shared\\chunk-GNCLJJF5.js", timestamp: 1761713220353 }, url: "/build/manifest-3688AA4F.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !0, v3_relativeSplatPath: !0, v3_throwAbortReason: !1, v3_routeConfig: !1, v3_singleFetch: !1, v3_lazyRouteDiscovery: !1, unstable_optimizeDeps: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -1975,13 +1918,13 @@ var mode = "development", assetsBuildDirectory = "public/build", future = { v3_f
     caseSensitive: void 0,
     module: Manage_exports
   },
-  "routes/index": {
-    id: "routes/index",
+  "routes/_index": {
+    id: "routes/_index",
     parentId: "root",
-    path: "index",
-    index: void 0,
+    path: void 0,
+    index: !0,
     caseSensitive: void 0,
-    module: routes_exports
+    module: index_exports
   }
 };
 export {
