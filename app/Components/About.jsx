@@ -1,86 +1,62 @@
-import React from "react";
+
+const story = [
+  {
+    title: "Founding",
+    body:
+      "Taco-IT was founded by Chris Benjamin to give Pacific Northwest businesses a true technology partner: someone who understands both web development and the operational realities of growing companies."
+  },
+  {
+    title: "Our Why",
+    body:
+      "We believe technology should be an asset, not another headache. When your tools are aligned with your goals, you earn back time to focus on your customers and your craft."
+  },
+  {
+    title: "Our Mission",
+    body:
+      "Build remarkable digital experiences and dependable infrastructure so local organizations can stand out online, stay secure, and scale with confidence."
+  },
+  {
+    title: "Our What",
+    body:
+      "From strategic consulting to managed IT, websites, and automation projects, we mix engineering expertise with practical business insight to implement solutions that grow with you."
+  },
+  {
+    title: "Our How",
+    body:
+      "With more than 15 years supporting education, healthcare, and service industries, we stay hands-on with emerging tech and tailor every engagement around measurable outcomes."
+  }
+];
 
 function About() {
   return (
-    <>
-      <section
-        className="relative w-full h-auto min-h-screen mx-4 py-2 break-words sm:my-10"
-        id="about"
-      >
-        <p className="text-center text-1xl md:text-2xl lg:text-4xl mb-2 overflow-hidden">
-          <span className="text-indigo-600">About</span> Us
+    <section className="space-y-12">
+      <header className="space-y-4 text-center">
+        <p className="text-sm font-semibold uppercase tracking-[0.4em] text-orange-300">
+          About Taco-IT
         </p>
+        <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+          Tacoma roots, enterprise expertise
+        </h2>
+        <p className="mx-auto max-w-3xl text-base text-white/70 sm:text-lg">
+          We partner with small and mid-sized teams to translate business goals
+          into resilient, secure, and scalable technology. Consider us an
+          extension of your in-house team, ready to strategize, build, and
+          maintain.
+        </p>
+      </header>
 
-        <div className="p-2 w-full">
-          <p className="text-md md:text-1xl font-bold leading-tight lg:leading-loose mb-2 mt-2 ">
-            Founding:
-          </p>
-          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5  mx-10 px-10">
-            Taco-IT was founded by Chris Benjamin to provide Technology services
-            to local businesses in the Pacific Northwest. We exist to help give
-            a technological edge to businesses who typically do not have their
-            own internal IT department. Chris Benjamin attended Devry University
-            where he earned his Bachelor of Computer Science while studying web
-            application design and administration. He later went on to obtain
-            his Masters in Computer Science focusing on IT Management to attain
-            the skills necessary to drive businesses forward using technology.{" "}
-          </p>
-          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5  mx-10 px-10">
-            Chris has worked for several local technology companies from a local
-            school district, a pharmacy support company, and as a the IT Manager
-            for a medium size medical practice. Technology is his passion and
-            knowing that businesses rely on a strong technology backend to stay
-            successful and competitive in today's market gave him the desire to
-            spread his expertise to other local businsses.
-          </p>
-
-          <p className="text-md md:text-1xl font-bold leading-tight lg:leading-loose mb-2 mt-2 ">
-            Our Why:
-          </p>
-          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5  mx-10 px-10">
-            To empower businesses to utilize technology as an asset. Let the
-            power of technology in todays' digital world work for you so you can
-            focus on your own innovations.
-          </p>
-
-          <p className="text-md md:text-1xl font-bold leading-tight lg:leading-loose mb-2 mt-2 ">
-            Our Mission:{" "}
-          </p>
-          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5  mx-10 px-10">
-            Our mission is to help your company stand out on the internet so
-            that your customers can find you and learn about your business. Let
-            us handle the technical aspects and you handle your passion
-          </p>
-
-          <p className="text-md md:text-1xl font-bold leading-tight lg:leading-loose mb-2 mt-2 ">
-            Our What:
-          </p>
-
-          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5  mx-10 px-10">
-            Our expertise is technology, your expertise is the foundation of
-            your business. Let's work together to see what aspects of technology
-            can be implemented that will help your business be efficient,
-            accurate, and reliable. Sometime's its creating and managing your
-            website, othertimes it may be implementing a new software solution
-            to help your sales team track leads and drive more sales. Later it
-            may be to setup a phone system so your customers can reach our staff
-            directly. Whatever it is, lets taco bout it!
-          </p>
-
-          <p className="text-md md:text-1xl font-bold leading-tight lg:leading-loose mb-2 mt-2 ">
-            Our How:
-          </p>
-          <p className="text-xs md:text-md ml-4 2xl:text-lg leading-5  mx-10 px-10">
-            With over 15 years of professional experience in the Pacific
-            Northwest, in multiple industry verticles, we possess strong market
-            knowledge of products and services that can be applied to empower
-            your business. By employing the best minds in the industry whose
-            focus is to help make your business successful we can ensure you get
-            products that fit your business and evolve as you grow.{" "}
-          </p>
-        </div>
-      </section>
-    </>
+      <div className="grid gap-6 md:grid-cols-2">
+        {story.map((item) => (
+          <article
+            key={item.title}
+            className="rounded-3xl border border-white/10 bg-white/5 p-6 text-left shadow-lg shadow-indigo-900/10 transition duration-200 hover:border-orange-300/40 hover:bg-white/10"
+          >
+            <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+            <p className="mt-3 text-base text-white/70">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }
 

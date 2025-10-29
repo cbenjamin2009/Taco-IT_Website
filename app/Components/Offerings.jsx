@@ -1,12 +1,10 @@
-
-
-function Offerings({title, info}) {
-    return (
-           <div className="">
-           <p className="text-xl">{title}</p>
-            <p>{info}</p>
-           </div>           
-    )
+function Offerings({ title, info }) {
+  return (
+    <div className="space-y-2">
+      <p className="text-lg font-semibold text-white">{title}</p>
+      <p className="text-sm leading-relaxed text-white/70">{info}</p>
+    </div>
+  );
 }
 
-export default Offerings
+export default Offerings;
