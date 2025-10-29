@@ -1,50 +1,83 @@
-import HomeIcon from "@mui/icons-material/Home"
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import InfoIcon from '@mui/icons-material/Info';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
-import GroupsIcon from '@mui/icons-material/Groups';
-import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import { useCallback } from "react";
+import { Link, useLocation } from "@remix-run/react";
+import Logo from "./Logo";
 
-function Nav() {
-      
-    return (
-        <nav className="">
-            <ul className="w-full flex lg:flex items-center lg:w-auto space-x-2 md:space-x-10 text-md md:text-2xl text-white mr-10 sm:mt-10">
-                <li className="flex flex-col items-center"> 
-                    <HomeIcon/>
-                    <a href='/' id="nav-link-home" className="hover:bg-slate-500">Home</a>
-                </li>
-                <li className="flex flex-col items-center"> 
-                    <ContactMailIcon/>
-                    <a href='/#contact' id="nav-link-contact" className="hover:bg-slate-500" >Contact</a>
-                </li>
-                <li className="flex flex-col items-center">
-                <InfoIcon />
-                    <a href='/#about' id="nav-link-about"  className="hover:bg-slate-500" >About</a>
-                </li>
-                <li className="flex flex-col items-center">
-                <DesignServicesIcon />
-                    <a href='/develop' id="nav-link-services" className="hover:bg-slate-500" >Develop</a>
-                </li>
-                <li className="flex flex-col items-center">
-                <GroupsIcon />
-                    <a href='/consult' id="nav-link-services"  className="hover:bg-slate-500">Consult</a>
-                </li>
-                <li className="flex flex-col items-center">
-                <ManageAccountsIcon />
-                    <a href='/manage' id="nav-link-services" className="hover:bg-slate-500" >Manage</a>
-                </li>
-                <li className="flex flex-col items-center">
-                <SupportAgentIcon />
-                    <a href='http://portal.taco-it.com' id="nav-link-services" className="hover:bg-slate-500" >Portal</a>
-                </li>
+const primaryLinks = [
+  { label: "Home", href: "/" },
+  { label: "Develop", href: "/develop" },
+  { label: "Consult", href: "/consult" },
+  { label: "Manage", href: "/manage" },
+  { label: "Contact", href: "#contact" }
+];
 
-            </ul>
+export default function Nav() {
+  const location = useLocation();
 
-        </nav>
-    
-    )
+  const handleAnchorClick = useCallback(
+    (hash) => {
+      if (typeof document === "undefined") {
+        return;
+      }
+
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (typeof window !== "undefined") {
+          const nextUrl =
+            hash === "#"
+              ? location.pathname
+              : `${location.pathname.replace(/#.*$/, "")}${hash}`;
+          window.history.replaceState(null, "", nextUrl);
+        }
+      }
+    },
+    [location.pathname]
+  );
+
+  return (
+    <header className="flex flex-wrap items-center justify-between gap-6 py-6 text-sm md:py-8">
+      <Logo />
+
+      <nav className="flex flex-1 flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-medium text-slate-200 md:justify-end md:text-base">
+        {primaryLinks.map(({ label, href }) =>
+          href.startsWith("/") ? (
+            <Link
+              key={label}
+              to={href}
+              className="transition-colors duration-150 hover:text-orange-300"
+            >
+              {label}
+            </Link>
+          ) : (
+            <a
+              key={label}
+              href={href}
+              className="transition-colors duration-150 hover:text-orange-300"
+              onClick={(event) => {
+                event.preventDefault();
+                handleAnchorClick(href);
+              }}
+            >
+              {label}
+            </a>
+          )
+        )}
+      </nav>
+
+      <div className="flex w-full flex-col gap-3 text-sm font-semibold text-slate-900 md:w-auto md:flex-row md:items-center md:gap-4">
+        <a
+          href="tel:+13603625004"
+          className="flex items-center justify-center rounded-full border border-orange-400 px-4 py-2 text-orange-300 transition-colors duration-150 hover:bg-orange-400/10"
+        >
+          (360) 362-5004
+        </a>
+        <a
+          href="#contact"
+          className="flex items-center justify-center rounded-full bg-orange-400 px-5 py-2 text-sm font-semibold text-slate-900 transition-transform duration-150 hover:scale-[1.02] hover:bg-orange-300 md:text-base"
+        >
+          Schedule a Consult
+        </a>
+      </div>
+    </header>
+  );
 }
-
-export default Nav

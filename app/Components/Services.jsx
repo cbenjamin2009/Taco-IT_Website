@@ -1,40 +1,62 @@
+import Consult from "../Images/consult.jpg";
+import Develop from "../Images/develop.jpg";
+import Manage from "../Images/manage.jpg";
+import Service from "./Service";
 
-import Develop from "../Images/develop.jpg"
-import Manage from "../Images/manage.jpg"
-import Consult from "../Images/consult.jpg"
-import Service from './Service'
+const servicesCopy = [
+  {
+    title: "Develop",
+    description:
+      "Custom websites, applications, and automations built to drive revenue and simplify operations.",
+    image: Develop,
+    href: "/develop"
+  },
+  {
+    title: "Consult",
+    description:
+      "Strategic IT consulting to plan roadmaps, modernize infrastructure, and mentor in-house teams.",
+    image: Consult,
+    href: "/consult"
+  },
+  {
+    title: "Manage",
+    description:
+      "Proactive managed services, security, and help desk support for stress-free day-to-day operations.",
+    image: Manage,
+    href: "/manage"
+  }
+];
 
 function Services() {
+  return (
+    <div className="space-y-12">
+      <header className="space-y-4 text-center">
+        <p className="text-sm font-semibold uppercase tracking-[0.4em] text-indigo-500">
+          Solutions
+        </p>
+        <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
+          Full-service support for growing teams
+        </h2>
+        <p className="mx-auto max-w-3xl text-base text-slate-600 sm:text-lg">
+          You bring the business goals, we craft the technology plan. Explore our
+          core service lines or reach out to mix and match a package that fits
+          your organization.
+        </p>
+      </header>
 
-    return (
-        <>
-        <section className="w-full" id="services">
-            <h2 className="text-xl lg:text-3xl font-bold leading-loose text-center pt-10"> <span className="text-indigo-600">Our</span> Services</h2>
-            <h3 className="text-center my-6">Click on a service to learn more</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 space-x-6 mx-2 lg:mx-10 my-2 lg:my-6">
-                <Service 
-                    ServiceTitle={"Develop"} 
-                    ServiceDescription={"Website Development"} 
-                    ServiceImage={Develop}
-                    LinkTo={"/develop"}
-                />
-                <Service 
-                    ServiceTitle={"Consult"} 
-                    ServiceDescription={"Professional IT Consulting"} 
-                    ServiceImage={Consult}
-                    LinkTo={"/consult"}
-                />
-                <Service
-                ServiceTitle={"Manage"}
-                ServiceDescription={"Managed IT Services for Business"}
-                ServiceImage={Manage}
-                LinkTo={"/manage"}
-                />
-               
-            </div> 
-        </section>
-    </>
-    )
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {servicesCopy.map((service) => (
+          <Service
+            key={service.title}
+            ServiceTitle={service.title}
+            ServiceDescription={service.description}
+            ServiceImage={service.image}
+            LinkTo={service.href}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default Services
+export default Services;

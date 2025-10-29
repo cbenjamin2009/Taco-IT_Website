@@ -1,7 +1,4 @@
 import HomePage from "~/Components/HomePage";
-import WallPaper from "~/Components/WallPaper"
-
-import WallPaperStyles from '~/styles/WallPaper.css'
 
 export const meta = () => {
   const description =
@@ -13,20 +10,6 @@ export const meta = () => {
   ];
 };
 
-export const links = () => {
-    return [
-        {
-            rel: "stylesheet",
-            href: WallPaperStyles
-        },
-    ]
-}
-
 export default function Index() {
-  return (
-    <>
-    <WallPaper />
-    <HomePage />
-    </>
-  );
+  return <HomePage />;
 }
