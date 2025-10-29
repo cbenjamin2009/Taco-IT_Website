@@ -1,5 +1,5 @@
 
-import { Link } from 'remix'
+import { Link } from '@remix-run/react'
 
 function Service({ServiceTitle, ServiceDescription, ServiceImage, LinkTo = "/"}) {
     return (

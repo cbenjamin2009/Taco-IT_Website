@@ -1,8 +1,8 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ["./app/**/*.{js,jsx}"], // Here we are going to tell Tailwind to use any javascript .js or .jsx file
-  theme: { extend: {
-
-  } },
-  variants: {},
-  plugins: [], 
+  content: ["./app/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 };

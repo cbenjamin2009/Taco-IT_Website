@@ -8,12 +8,14 @@ import managestyles from "../../styles/manage.css";
 
 
 export const meta = () => {
-    return {
-      title: "Taco-IT Website Development",
-      description:
-        "Taco-IT Provides Website Design and Website Hosting services. If your website needs a new look, or maybe some small changes, let us help you provide an amazing website for your customers"
-    };
-  };
+  const description =
+    "Taco-IT Provides Website Design and Website Hosting services. If your website needs a new look, or maybe some small changes, let us help you provide an amazing website for your customers";
+
+  return [
+    { title: "Taco-IT Website Development" },
+    { name: "description", content: description }
+  ];
+};
 
 export let links = () => {
   return [

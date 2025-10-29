@@ -1,5 +1,5 @@
 import LogoImage from '~/Images/Website_Logo.png'
-import { Link } from 'remix'
+import { Link } from '@remix-run/react'
 
 export default function Logo() {
     return (

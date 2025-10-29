@@ -4,14 +4,14 @@ function About() {
   return (
     <>
       <section
-        class="relative w-full h-auto min-h-screen mx-4 py-2 break-words sm:my-10"
+        className="relative w-full h-auto min-h-screen mx-4 py-2 break-words sm:my-10"
         id="about"
       >
-        <p class="text-center text-1xl md:text-2xl lg:text-4xl mb-2 overflow-hidden">
+        <p className="text-center text-1xl md:text-2xl lg:text-4xl mb-2 overflow-hidden">
           <span className="text-indigo-600">About</span> Us
         </p>
 
-        <div class="p-2 w-full">
+        <div className="p-2 w-full">
           <p className="text-md md:text-1xl font-bold leading-tight lg:leading-loose mb-2 mt-2 ">
             Founding:
           </p>

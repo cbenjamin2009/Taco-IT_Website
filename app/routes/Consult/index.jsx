@@ -5,12 +5,14 @@ import ConsultingImage from '../../Images/consulting.jpg'
 import Footer from '../../Components/Footer'
 
 export const meta = () => {
-    return {
-      title: "Taco-IT - IT Consulting Services",
-      description:
-        "Taco-IT Provides Professional IT Consulting Services, we are your technology partner and are here to help. We can help your existing IT department with software and hardware projects, we can answer technical questions, and we can provide project based consulting services to your business. "
-    };
-  };
+  const description =
+    "Taco-IT Provides Professional IT Consulting Services, we are your technology partner and are here to help. We can help your existing IT department with software and hardware projects, we can answer technical questions, and we can provide project based consulting services to your business. ";
+
+  return [
+    { title: "Taco-IT - IT Consulting Services" },
+    { name: "description", content: description }
+  ];
+};
 
 export default function Manage() {
  const consultData = "As the Tacoma-Area Consulting Organization for Information Technology (TACO-IT), we provide a wide variety of consulting services for your business. Let us be your technology experts so you can focus on what you do best, your business. We provide hardware and software consulting to find the right technology for you and your budget. We can assist existing IT staff realize potentials in new areas for improvement. We specialize in process improvement utilizing information technology to help your business reach it's objectives efficiently, accurately and securly. We have a certified Disaster Recovery engineer specializing in backup and restoration helping your company reach your recovery time objective and securing your company data! No matter the project, we can help your business!"

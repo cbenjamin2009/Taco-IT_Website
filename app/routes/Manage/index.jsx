@@ -8,11 +8,13 @@ import managestyles from "../../styles/manage.css";
 
 
 export const meta = () => {
-  return {
-    title: "Taco-IT Managed IT Service Provider (MSP)",
-    description:
-      "Taco-IT Provides Professional Managed IT Services to Small to Medium Sized businesses in the Tacoma and Pierce County Area. Managed Backup, Managed Office 365, Managed Email Services, Managed Anti-Viruus, Onsite and Remote Support!"
-  };
+  const description =
+    "Taco-IT Provides Professional Managed IT Services to Small to Medium Sized businesses in the Tacoma and Pierce County Area. Managed Backup, Managed Office 365, Managed Email Services, Managed Anti-Viruus, Onsite and Remote Support!";
+
+  return [
+    { title: "Taco-IT Managed IT Service Provider (MSP)" },
+    { name: "description", content: description }
+  ];
 };
 
 

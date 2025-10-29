@@ -8,10 +8,10 @@ function Services() {
 
     return (
         <>
-        <section class="w-full" id="services">
-            <h2 class="text-xl lg:text-3xl font-bold leading-loose text-center pt-10"> <span className="text-indigo-600">Our</span> Services</h2>
+        <section className="w-full" id="services">
+            <h2 className="text-xl lg:text-3xl font-bold leading-loose text-center pt-10"> <span className="text-indigo-600">Our</span> Services</h2>
             <h3 className="text-center my-6">Click on a service to learn more</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 space-x-6 mx-2 lg:mx-10 my-2 lg:my-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 space-x-6 mx-2 lg:mx-10 my-2 lg:my-6">
                 <Service 
                     ServiceTitle={"Develop"} 
                     ServiceDescription={"Website Development"} 
