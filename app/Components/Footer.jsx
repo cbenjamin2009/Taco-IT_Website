@@ -26,16 +26,16 @@ export default function Footer() {
           <p className="text-lg font-semibold text-white">Reach Us</p>
           <a
             className="flex items-center gap-2 text-white/80 transition-colors duration-150 hover:text-orange-300"
-            href="tel:+13603625004"
+            href="tel:+12533002105"
           >
             <PhoneInTalkIcon fontSize="small" />
-            (360) 362-5004
+            253-300-2105
           </a>
           <a
             className="block text-white/80 transition-colors duration-150 hover:text-orange-300"
-            href="mailto:helpdesk@taco-it.com"
+            href="mailto:inquiry@taco-it.com"
           >
-            helpdesk@taco-it.com
+            inquiry@taco-it.com
           </a>
           <div className="flex items-center gap-3 pt-2">
             <a

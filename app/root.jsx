@@ -1,3 +1,4 @@
+import { json } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -8,6 +9,12 @@ import {
 } from "@remix-run/react";
 
 import tailwindstyles from "./tailwind.css";
+
+export const loader = () => {
+  return json({
+    staticformsApiKey: process.env.STATICFORMS_API_KEY ?? ""
+  });
+};
 
 export const links = () => {
   return [
@@ -22,7 +29,7 @@ export const meta = () => {
     "Taco-IT, TacoIT, IT Services Tacoma, IT Services Puyallup, Website Design Tacoma, Website Creator Tacoma, Web design tacoma, web design puyallup, computer company tacoma, computer company puyallup, Web Design, Website Design, Website Consultation, Web Consultation, Cheap Website, Website Creator, Tacoma WA, Puyallup WA, Business Website, Wordpress, Managed Services Tacoma, MSP Tacoma, Managed Anti-Virus, Onsite Support, Managed Patches, Managed Spam, Managed Email, Remote Support, Managed Backup, Managed Office 365, Managed Microsoft 365, Managed Computer Services, Business Computer Services";
 
   return [
-    { title: "Taco-IT" },
+    { title: "Taco-IT, LLC" },
     { name: "description", content: description },
     { name: "keywords", content: keywords },
     {

@@ -2,6 +2,7 @@ import ConsultingImage from "../../Images/consulting.jpg";
 import Contact from "../../Components/Contact";
 import Footer from "../../Components/Footer";
 import Nav from "../../Components/Nav";
+import HeroImageParallax from "../../Components/HeroImageParallax";
 
 const consultHighlights = [
   "Project-based advisory for migrations, cloud adoption, and compliance initiatives.",
@@ -97,23 +98,25 @@ export default function Consult() {
                   Request a consultation
                 </a>
                 <a
-                  href="tel:+13603625004"
+                  href="tel:+12533002105"
                   className="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-white transition-colors duration-150 hover:border-orange-300 hover:text-orange-200"
                 >
-                  Call (360) 362-5004
+                  Call 253-300-2105
                 </a>
               </div>
             </div>
 
             <div className="flex justify-center">
-              <div className="relative w-full max-w-md overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-xl shadow-indigo-900/40 backdrop-blur">
-                <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-500/30 to-orange-400/10 blur-2xl" />
-                <img
-                  src={ConsultingImage}
-                  alt="Taco-IT consulting session"
-                  className="h-full w-full rounded-2xl object-cover"
-                />
-              </div>
+              <HeroImageParallax>
+                <div className="relative w-full max-w-md overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-xl shadow-indigo-900/40 backdrop-blur">
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-500/30 to-orange-400/10 blur-2xl" />
+                  <img
+                    src={ConsultingImage}
+                    alt="Taco-IT consulting session"
+                    className="h-full w-full rounded-2xl object-cover"
+                  />
+                </div>
+              </HeroImageParallax>
             </div>
           </div>
         </div>

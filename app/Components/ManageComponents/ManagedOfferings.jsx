@@ -6,6 +6,7 @@ import KeyboardIcon from "@mui/icons-material/Keyboard";
 import PersonPinIcon from "@mui/icons-material/PersonPin";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import EngineeringIcon from "@mui/icons-material/Engineering";
+import { useEffect, useRef, useState } from "react";
 import Offerings from "../Offerings";
 
 const managedServices = [
@@ -52,8 +53,42 @@ const managedServices = [
 ];
 
 function ManagedOfferings() {
+  const gridRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      setVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(grid);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="grid gap-4 md:grid-cols-2">
+    <div
+      ref={gridRef}
+      className={`grid gap-4 md:grid-cols-2 transition-all duration-700 ease-out ${
+        visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+      }`}
+    >
       {managedServices.map(({ icon: Icon, title, info }) => (
         <div
           key={title}
