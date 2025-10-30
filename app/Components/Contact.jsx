@@ -4,9 +4,9 @@ import { useRouteLoaderData } from "@remix-run/react";
 
 function Contact() {
   const rootData = useRouteLoaderData("root");
-  const accessKey =
-    rootData && typeof rootData === "object" && "contactAccessKey" in rootData
-      ? rootData.contactAccessKey
+  const apiKey =
+    rootData && typeof rootData === "object" && "staticformsApiKey" in rootData
+      ? rootData.staticformsApiKey
       : "";
 
   return (
@@ -46,11 +46,7 @@ function Contact() {
         action="https://api.staticforms.xyz/submit"
         method="post"
       >
-        <input
-          type="hidden"
-          name="accessKey"
-          value={accessKey}
-        />
+        <input type="hidden" name="apiKey" value={apiKey} />
         <input type="text" name="honeypot" className="hidden" />
 
         <div className="md:col-span-1">

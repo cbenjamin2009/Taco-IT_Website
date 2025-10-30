@@ -1,7 +1,7 @@
 # Taco-IT Website Change Journal
 
 ## Session 1 – Platform Upgrade & Project Audit
-- Upgraded the stack from Remix 1 / React 17 to Remix 2.17.1 with React 18, refreshed Emotion, MUI, Tailwind, and build tooling (`package.json`, scripts, entry points, config files).
+- Upgraded the stack from Remix 1 / React 17 to Remix 2.17.1 with React 18, refreshed Emotion, MUI, Tailwind, and build tooling (`package.json`, scripts, entry points, config files').
 - Replaced legacy Remix entry APIs with React 18 hydration/streaming patterns (`app/entry.client.jsx`, `app/entry.server.jsx`) and switched app-wide meta exports to the Remix 2 array format.
 - Cleaned imports to use `@remix-run/react`, updated the Vercel handler, regenerated Tailwind inputs, and ensured `npm run build` succeeds on the new foundation.
 
@@ -29,6 +29,10 @@
 - Designed bespoke gradient-based SVG illustrations for Develop, Consult, and Manage service cards to replace the stock photography (`app/Images/develop.svg`, `consult.svg`, `manage.svg`).
 - Updated the services component to point at the new assets so the section matches the updated brand palette and glassmorphism aesthetic (`app/Components/Services.jsx`).
 - Swapped the public contact email across footer and contact modules to `inquiry@taco-it.com`.
+
+## Session 7 – Contact Form Secret Management
+- Moved the StaticForms credential to an environment variable exposed via the root loader (`STATICFORMS_API_KEY`) and updated the contact form to submit using the `apiKey` field (`app/root.jsx`, `app/Components/Contact.jsx`).
+- Documented the env requirement in `README.md` and guardrails in `Context.md`; build still passes with the standard Remix future-flag warnings.
 
 ---
 - Latest build verification: `npm run build` (Remix future-flag warnings only).
