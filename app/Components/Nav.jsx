@@ -66,10 +66,10 @@ export default function Nav() {
 
       <div className="flex w-full flex-col gap-3 text-sm font-semibold text-slate-900 md:w-auto md:flex-row md:items-center md:gap-4">
         <a
-          href="tel:+13603625004"
+          href="tel:+12533002105"
           className="flex items-center justify-center rounded-full border border-orange-400 px-4 py-2 text-orange-300 transition-colors duration-150 hover:bg-orange-400/10"
         >
-          (360) 362-5004
+          253-300-2105
         </a>
         <a
           href="#contact"

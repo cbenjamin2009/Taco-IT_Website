@@ -20,10 +20,10 @@ function Contact() {
       <div className="grid gap-4 text-sm text-white/80 sm:grid-cols-2">
         <a
           className="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 transition-colors duration-150 hover:border-orange-300 hover:bg-white/10"
-          href="tel:+13603625004"
+          href="tel:+12533002105"
         >
           <PhoneInTalkIcon fontSize="small" />
-          (360) 362-5004
+          253-300-2105
         </a>
         <a
           className="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 transition-colors duration-150 hover:border-orange-300 hover:bg-white/10"
