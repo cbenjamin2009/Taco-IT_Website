@@ -3,6 +3,7 @@ import Skills from "../../Components/DevelopComponents/Skills";
 import Contact from "../../Components/Contact";
 import Footer from "../../Components/Footer";
 import Nav from "../../Components/Nav";
+import HeroImageParallax from "../../Components/HeroImageParallax";
 
 const developHighlights = [
   "Modern Remix, Next.js, and React builds tuned for performance and SEO.",

@@ -33,9 +33,9 @@ export default function Footer() {
           </a>
           <a
             className="block text-white/80 transition-colors duration-150 hover:text-orange-300"
-            href="mailto:helpdesk@taco-it.com"
+            href="mailto:inquiry@taco-it.com"
           >
-            helpdesk@taco-it.com
+            inquiry@taco-it.com
           </a>
           <div className="flex items-center gap-3 pt-2">
             <a

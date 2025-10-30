@@ -1,3 +1,4 @@
+import { json } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -8,6 +9,12 @@ import {
 } from "@remix-run/react";
 
 import tailwindstyles from "./tailwind.css";
+
+export const loader = () => {
+  return json({
+    contactAccessKey: process.env.STATICFORMS_ACCESS_KEY ?? ""
+  });
+};
 
 export const links = () => {
   return [

@@ -2,6 +2,7 @@ import WebIcon from "@mui/icons-material/Web";
 import LanguageIcon from "@mui/icons-material/Language";
 import WebhookIcon from "@mui/icons-material/Webhook";
 import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
+import { useEffect, useRef, useState } from "react";
 import Offerings from "../Offerings";
 
 const offerings = [
@@ -32,8 +33,42 @@ const offerings = [
 ];
 
 function DevelopmentOfferings() {
+  const gridRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      setVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+
+    observer.observe(grid);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="grid gap-4 md:grid-cols-2">
+    <div
+      ref={gridRef}
+      className={`grid gap-4 md:grid-cols-2 transition-all duration-700 ease-out ${
+        visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+      }`}
+    >
       {offerings.map(({ icon: Icon, title, info }) => (
         <div
           key={title}

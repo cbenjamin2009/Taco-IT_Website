@@ -2,6 +2,7 @@ import ConsultingImage from "../../Images/consulting.jpg";
 import Contact from "../../Components/Contact";
 import Footer from "../../Components/Footer";
 import Nav from "../../Components/Nav";
+import HeroImageParallax from "../../Components/HeroImageParallax";
 
 const consultHighlights = [
   "Project-based advisory for migrations, cloud adoption, and compliance initiatives.",
@@ -106,14 +107,16 @@ export default function Consult() {
             </div>
 
             <div className="flex justify-center">
-              <div className="relative w-full max-w-md overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-xl shadow-indigo-900/40 backdrop-blur">
-                <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-500/30 to-orange-400/10 blur-2xl" />
-                <img
-                  src={ConsultingImage}
-                  alt="Taco-IT consulting session"
-                  className="h-full w-full rounded-2xl object-cover"
-                />
-              </div>
+              <HeroImageParallax>
+                <div className="relative w-full max-w-md overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-xl shadow-indigo-900/40 backdrop-blur">
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-500/30 to-orange-400/10 blur-2xl" />
+                  <img
+                    src={ConsultingImage}
+                    alt="Taco-IT consulting session"
+                    className="h-full w-full rounded-2xl object-cover"
+                  />
+                </div>
+              </HeroImageParallax>
             </div>
           </div>
         </div>

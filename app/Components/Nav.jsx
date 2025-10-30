@@ -74,6 +74,10 @@ export default function Nav() {
         <a
           href="#contact"
           className="flex items-center justify-center rounded-full bg-orange-400 px-5 py-2 text-sm font-semibold text-slate-900 transition-transform duration-150 hover:scale-[1.02] hover:bg-orange-300 md:text-base"
+          onClick={(event) => {
+            event.preventDefault();
+            handleAnchorClick("#contact");
+          }}
         >
           Schedule a Consult
         </a>

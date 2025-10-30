@@ -1,6 +1,7 @@
-import Consult from "../Images/consult.jpg";
-import Develop from "../Images/develop.jpg";
-import Manage from "../Images/manage.jpg";
+import Consult from "../Images/consult.svg";
+import Develop from "../Images/develop.svg";
+import Manage from "../Images/manage.svg";
+import { useEffect, useRef, useState } from "react";
 import Service from "./Service";
 
 const servicesCopy = [
@@ -28,6 +29,35 @@ const servicesCopy = [
 ];
 
 function Services() {
+  const gridRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      setVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(grid);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="space-y-12">
       <header className="space-y-4 text-center">
@@ -44,7 +74,12 @@ function Services() {
         </p>
       </header>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        ref={gridRef}
+        className={`grid gap-6 md:grid-cols-2 lg:grid-cols-3 transition-all duration-700 ease-out ${
+          visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+        }`}
+      >
         {servicesCopy.map((service) => (
           <Service
             key={service.title}

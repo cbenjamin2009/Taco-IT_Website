@@ -1,7 +1,14 @@
-import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
+import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
+import { useRouteLoaderData } from "@remix-run/react";
 
 function Contact() {
+  const rootData = useRouteLoaderData("root");
+  const accessKey =
+    rootData && typeof rootData === "object" && "contactAccessKey" in rootData
+      ? rootData.contactAccessKey
+      : "";
+
   return (
     <section className="mx-auto flex max-w-5xl flex-col gap-10 rounded-3xl bg-white/5 p-6 shadow-2xl shadow-indigo-900/30 ring-1 ring-white/10 backdrop-blur md:p-12">
       <header className="space-y-4 text-center">
@@ -27,10 +34,10 @@ function Contact() {
         </a>
         <a
           className="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 transition-colors duration-150 hover:border-orange-300 hover:bg-white/10"
-          href="mailto:helpdesk@taco-it.com"
+          href="mailto:inquiry@taco-it.com"
         >
           <ConfirmationNumberIcon fontSize="small" />
-          helpdesk@taco-it.com
+          inquiry@taco-it.com
         </a>
       </div>
 
@@ -42,7 +49,7 @@ function Contact() {
         <input
           type="hidden"
           name="accessKey"
-          value="61768859-935c-4f63-92f8-1f254a0346ad"
+          value={accessKey}
         />
         <input type="text" name="honeypot" className="hidden" />
 
